@@ -92,8 +92,8 @@ React 的 useEffect Hook 需要两个参数：第一个参数是一个会产生�
 
 
 
-* 检查[最后一部分的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Side-Effects)。
-* 确认[最后一部分的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Props-Handling...hs/React-Side-Effects?expand=1)。
+* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Side-Effects)。
+* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Props-Handling...hs/React-Side-Effects?expand=1)。
 * 阅读更多关于 React 的 useEffect Hook 的文章：([0](https://reactjs.org/docs/hooks-effect.html), [1](https://reactjs.org/docs/hooks-reference.html#useeffect))。
 * 在第一个函数参数里使用 `console.log()` 来测试 React useEffect Hook 的依赖数组。也看一下依赖数组为空的情况下，日志是什么样的。
 
