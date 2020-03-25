@@ -1,6 +1,6 @@
 ## React DOM
 
-现在，我们已经了解了组件定义及其实例化，接下来可以转到App组件的实例化。它从一开始就在我们的应用程序的 *src/index.js* 文件中：
+现在我们已经了解了组件定义及其实例化，接下来我们来看看App组件的实例化。它从一开始就在我们的应用程序的 *src/index.js* 文件中：
 {title="src/index.js",lang="javascript"}
 ~~~~~~~
 import React from 'react';
