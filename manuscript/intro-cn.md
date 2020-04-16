@@ -102,7 +102,7 @@
 
 * > JavaScript beginners with knowledge in fundamental JS, CSS, and HTML: If you just started out with web development, and have a basic grasp about JS, CSS, and HTML, this book should give you everything that's needed to learn React. However, if you feel there is a gap in your JavaScript knowledge, don't hesitate to read up on this topic before continuing with the book. You will have lots of references to this fundamental knowledge in the book though.
 
-* JavaScript 初学者，了解基本的 JS、CSS 和 HTML 知识。如果你刚开始接触 Web 开发，对 JS、CSS 和 HTML 有基本概念，那么本书可以给你学习 React 所需的内容。如果你觉得自己的 JavaScript 水平还不够，那可以在继续本书之前了解更多关于  JavaScript 的内容。然而你也会在本书的参考中得到更多基础知识。
+* JavaScript 初学者，了解基本的 JS、CSS 和 HTML 知识。如果你刚开始接触 Web 开发，对 JS、CSS 和 HTML 有基本概念，那么本书可以提供给所有学习 React 需要的内容。如果你觉得自己的 JavaScript 水平还不够，那可以在继续本书之前了解更多关于  JavaScript 的知识。当然，你也会在本书的参考中获得更多基础知识的相关资料。
 
 * > JavaScript veterans coming from jQuery: If you have used JavaScript with jQuery, MooTools, and Dojo extensively back in the days, the new JavaScript era may seem overwhelming for someone getting back on track with it. However, most of the fundamental knowledge didn't change, it's still JavaScript and HTML under the hood, so this book should give you the right start into React.
 
@@ -110,16 +110,16 @@
 
 * > JavaScript enthusiasts with knowledge in other modern SPA frameworks: If you are coming from Angular or Vue, there may be lots of differences in how to write applications with React, however, all these frameworks share the same fundamentals of JavaScript and HTML. After a mindset shift to get comfortable with React, you should be doing just fine adopting React.
 
-* JavaScript 爱好者，已有现代单页面应用框架的经验：如果你做过 Angular 或者 Vue，虽然 React 应用写起来很不一样，但这些框架的基础构件都是 JavaScript 和 HTML。当你适应了用 React 的方式去思考问题，这对你来说就不是什么问题了。
+* JavaScript 爱好者，已有其他现代单页面应用框架的经验：如果你用过 Angular 或者 Vue，虽然 React 应用写起来会很不一样，但这些框架的基础构件都是 JavaScript 和 HTML。一旦适应了用 React 的方式去思考问题，这对你来说就不是什么问题了。
 
 * > If you are coming from another programming language, you should be more familiar than others about the different aspects of programming. After picking up the fundamentals about JavaScript and HTML, you should have a good time learning React with me.
 
-* 掌握其他编程语言的人：你可能在编程方面比其他人更熟练。当熟悉了 JavaScript 和 HTML 之后，你就可以愉快地和我一起学习 React 了。
+* 掌握其他编程语言的人：你可能在编程原理方面比其他人更加熟练。当习惯了 JavaScript 和 HTML 之后，你就可以愉快地和我一起学习 React 了。
 
 * > If your main profession is in design, user interaction or user experience, don't hesitate to pick up this book. You may be already quite familiar with HTML and CSS which is a plus. After going through some more JavaScript fundamentals, you should be good to get through this book. These days UI/UX are moving closer to the implementation details which are often taken care of with React. It would be your perfect asset to know how things work in code.
 
-* 如果你的专业是在设计方向，用户交互设计是体验设计，也无需担心。你可能已经对 HTML 和 CSS 很熟悉了，只需要再学习一些 JavaScript 的基础知识，就可以读完本书了。现如今的 UI/UX 和实现方式的关系越来越密切，需要了解一些 React。本书将很好地带你了解它的工作原理。
+* 如果你的专业是在设计方向，用户交互设计是体验设计，也无需担心。你可能已经对 HTML 和 CSS 很熟悉了，只需要再学习一些 JavaScript 的基础知识，就能够阅读本书了。现如今的 UI/UX 和实现方式的关系越来越密切，了解 React 相关的知识会让你的工作获益匪浅，本书将很好地带你了解它的工作原理。
 
 * > If you are a Product Owner or Product Manager of your development department, this book should give you a good breakdown of all the essential parts in a React application. Every section explains one React concept/pattern/technique to add another feature or to improve the overall architecture. It's a well rounded reference guide for React.
 
-* 如果你是研发团队的产品负责人或是产品经理，本书可以给你详细剖析 React 应用中的每一个必需部分。每一部分都讲了一个 React 概念、模式、技术，并用其来添加一个新的功能，或是提升整体架构。这是一个较为全面的 React 教程。
+* 如果你是研发团队的产品负责人或是产品经理，本书会为你详细剖析 React 应用中的所有不可或缺的部分。每一章节都讲解了一个 React 概念、模式、技术，并用其来增加一个新功能，或是提升整体架构。这是一个全面的 React 教程。
