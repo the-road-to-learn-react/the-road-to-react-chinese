@@ -178,9 +178,9 @@ describe('Item', () => {
 # leanpub-end-insert
 ~~~~~~~
 
-> Information about a component's or element's attributes are available via the `props` property. In the test assertion, we find the anchor tag (`a`) and its `href` attribute, and perform an equality check. If the test turns out green, we can be sure the anchor tag's `href` attribute is set to the correct `url` property of the `item`. In the same test case, we can add more test assertions for the other item's properties:
+> Information about a component's or element's attributes are available via the `props` property. In the test assertion, we find the anchor tag (`a`) and its `href` attribute, and perform an available check. If the test turns out green, we can be sure the anchor tag's `href` attribute is set to the correct `url` property of the `item`. In the same test case, we can add more test assertions for the other item's properties:
 
-
+组件或元素的属性信息可以通过 `porps` 属性获取到。在测试的断言中，我们获取到锚点标签(`a`)和它的 `href` 属性，同时执行了一个可用性检查。如果测试变绿，我们就可以确定 Item 组件锚点标签的 `href` 属性被设置了正确的 `url` 属性。在同一个测试用例中，我们可以为其他 Item 组件的属性增加更多的测试断言：
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -213,7 +213,7 @@ describe('Item', () => {
 
 > Since there are multiple `span` elements, we find all of them and select the second one (index is `1` , because we count from `0`) and compare its React `children` prop to the item's `author`. This test isn't thorough enough, though. Once the order of `span` elements in the Item component changes, the test fails. Avoid this flaw by changing the assertion to:
 
-
+因为有多个 `span` 元素，我们先获取到所有的 `span` 元素然后选择第二个（索引为1，因为从0开始计数）再将其 React 的 `children` 属性与 Item 组件的 `author` 作对比。不过，这个测试还不够彻底。一旦 Item 组件中的 span 元素的顺序发生变化，测试就会失败。为了避免这样的情况，可以将断言改成：
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -236,11 +236,11 @@ describe('Item', () => {
 
 > The test assertion isn't as specific anymore. It just tests whether there is one element with the item's `author` property. You can apply this technique for all the other properties of the item yourself. Otherwise, leave it for later as exercise.
 
-
+这下测试断言不再那么具体了。它只是测试了是否有一个元素具有 Item 的 `author` 属性。你可以用这种方式去测试 Item 其他的属性。或者你可以把它们留作后面的练习。
 
 > We tested whether the Item component renders as text or HTML attributes (`href`), but we didn't test the callback handler. The following test case makes this assertion by simulating a click event via the `button` element's `onClick` attribute:
 
-
+我们已经测试了 Item 组件是否如期渲染了字符或者 HTML 属性(`href`)，但是我们还没有测试回调处理函数。下面的测试用例通过 `button` 元素的 `onClick` 属性模拟了一个点击事件，从而实现了这个断言。
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -273,11 +273,11 @@ describe('Item', () => {
 
 > Jest lets us pass a test-specific function to the Item component as prop. These test specific functions are called **spy**, **stub**, or **mock**; each is used for different test scenarios. The `jest.fn()` returns us a *mock* for the actual function, which lets us capture when it's called. As a result, we can use Jest assertions like `toHaveBeenCalledTimes`, which lets us assert a number of times the function has been called; and `toHaveBeenCalledWith`, to verify arguments that are passed to it.
 
-
+Jest 允许我们将一个特殊的测试函数当做 Item 组件的 prop 传入。这些函数被称为 **spy** 、 **stub** 或 **mock**；它们被用做不同的测试场景。`jest.fn()` 将返回一个真实函数的 mock，这可以让我们捕捉到什么时候被调用。因此，我们可以使用 `toHaveBeenCalledTimes` 断言来断言函数被调用的次数；也可以用 `toHaveBeenCalledWith` 来验证传入函数的参数。
 
 > Item component's unit test is complete, because we tested input (`item`) and output (`onRemoveItem`). The two shouldn't be confused with input (arguments) and output (JSX) of the function component, which were also tested as. One last improvement makes the test suite for the Item component more concise by giving it a shared setup function:
 
-
+Item 组件的单元测试到这里就完成了，因为我们已经测试了输入(`item`)和输出(`onRemoveItem`)。不要将这两者与已经测试过的函数组件的输入（参数）和输出（JSX）混淆。最后的一个改进是增加一个公有的设置函数来让 Item 组件的测试更加简洁：
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -318,7 +318,7 @@ describe('Item', () => {
 
 > A common setup (or teardown) function in tests removes duplicated code. Since the component must be rendered for both test cases, and the props are the same for both renderings, we can share this code in a common setup function. From there, we'll move on to testing the List component:
 
-
+在测试中，一个公有的设置（或拆卸）函数可以消除重复代码。因为组件必须在两个测试中渲染，而且两次渲染的 props 是相同的，所以我们可以将这部分代码放到一个公有的设置函数中。从这里开始，我们将进入 List 组件的测试：
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -361,11 +361,11 @@ describe('List', () => {
 
 > The test checks straightforward whether two Item components are rendered for the two items in the list. You could continue testing the List component by checking whether each callback handler (`onRemoveItem`) is called for each Item component, which would have a similar solution to the previous Item component's test. Is this test still a unit test or already an integration test?
 
-
+该测试直接检查了在 List 组件中是否以两个 item 属性渲染了两个 Item 组件。你可以使用上一个 Item 组件测试中类似的方式，接着测试 List 组件的每一个回调处理函数(`onRemoveItem`)是否在每一个 Item 组件中被调用。那么这个这样的测试还是一个单元测试吗？或者说这已经失意者集成测试了呢？
 
 > Keeping this question in the room, we will move on to the SearchForm with InputWithLabel component:
 
-
+先把这个问题放一放，我们将继续测试带有 InputWithLabel 组件的 SearchForm 组件：
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -395,6 +395,12 @@ describe('SearchForm', () => {
 ~~~~~~~
 
 > In this test, we assert whether the InputWithLabel component receives the correct prop from the SearchForm component. Essentially the test stops before the InputWithLabel component, because it only tests the interface (props) of it. Arguably it's still a unit test, because the underlying implementation details of the InputWithLabel component could change without changing the interface. You can change the test to make it work through to the InputWithLabel component's input field, because all child components and its elements are rendered too:
+
+在这个测试中，我们断言了 InputWithLabel 组件是否从 SearchForm 组件中接收到了正确的 prop。本质上来说这个测试在 InputWithLabel 组件之前就结束了，因为它只测试了组件的接口(props)。可以说它仍然是一个单元测试，因为 InputWithLabel 组件的层实现细节可以在不改变接口的情况下改变。你可以通过改变测试来使其工作到InputWithLabel组件的输入字段，因为所有的子组件和它的元素也会被渲染。
+
+
+
+**这段需要重点校对**
 
 
 
