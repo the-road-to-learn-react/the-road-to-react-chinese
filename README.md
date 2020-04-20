@@ -1,11 +1,11 @@
 # The Road to React [Book]
 
-Official repository for [The Road to React](http://roadtoreact.com/). If you want to leave a review, please do it on [Amazon](https://www.amazon.com/dp/B077HJFCQX?tag=21moves-20) or [Goodreads](https://www.goodreads.com/book/show/37503118-the-road-to-learn-react).
+Official repository for [The Road to React](http://roadtoreact.com/). If you want to leave a review, please do it on [Amazon](https://amzn.to/2LHjxRB) or [Goodreads](https://www.goodreads.com/book/show/37503118-the-road-to-learn-react).
 
 ## Updates, Help and Support
 
 * Get book updates via [E-Mail](https://www.getrevue.co/profile/rwieruch) or [Twitter](https://twitter.com/rwieruch)
-* Get help, while learning with the book or teach others, in the official [Slack Channel](https://slack-the-road-to-learn-react.wieruch.com/)
+* Get help, while learning with the book or teach others, in the official [Slack Channel](https://courses.robinwieruch.de/community-join)
 * Find out how you can [support the Book](https://www.robinwieruch.de/about/)
 
 ## Contribute
