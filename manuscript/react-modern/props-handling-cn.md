@@ -326,10 +326,10 @@ const Item = ({ item }) => (
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Props-Handling)。
 * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Controlled-Components...hs/Props-Handling?expand=1)。
-* 阅读更多关于 [JavaScript 的解构赋值](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+* 阅读更多关于 [JavaScript 的解构赋值](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)的信息。
 * 思考 JavaScript 的数组解构 -- 用在 React 的 `useState` hook 中 -- 和对象解构之间的区别。
-* 阅读更多关于 [JavaScript 的展开运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)。
-* 阅读更多关于 [JavaScript 的剩余参数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
+* 阅读更多关于 [JavaScript 的展开运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)的信息。
+* 阅读更多关于 [JavaScript 的剩余参数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)的信息。
 * 从上一节课中了解一下 JavaScript （展开运算符，剩余参数，解构）以及与 React 相关的东西（例如 props）。
 * 继续用你喜欢的方式去处理 React 的 props。如果你依然不确定使用哪种方式，考虑一下在上一节中的版本。
 
