@@ -2,9 +2,9 @@
 
 ## 实例化 React 组件
 
-> Next, I'll briefly explain JavaScript classes, to help clarify React components. Technically they are not related, but it is a fitting analogy for you to understand the concept of a component.
+> Next, I'll briefly explain JavaScript classes, to help clarify React components. Technically they are not related, which is important to note, but it is a fitting analogy for you to understand the concept of a component.
 
-接下来，我将简单介绍一下 JavaScript 类，以帮助阐明 React 组件。从技术上讲，它们没有什么关系，但这是您理解组件概念的合适的类比。
+接下来，我将简单介绍一下 JavaScript 类，以帮助阐明 React 组件。从技术上讲，它们没有什么关系，需要注意这一点，但这对于您理解组件概念是一个合适的类比。
 
 > Classes are most often used in object-oriented programming languages. JavaScript, always flexible in its programming paradigms, allows functional programming and object-oriented programming to co-exist side-by-side. To recap JavaScript classes for object-oriented programming, consider the following *Developer* class:
 
@@ -68,9 +68,9 @@ console.log(dennis.getName());
 // "Dennis Wieruch"
 ~~~~~~~
 
-> If a JavaScript class definition exists, one can create *multiple* instances of it. It is similar to a React component, which has only *one* component definition, but can have *multiple* instances:
+> If a JavaScript class definition exists, one can create *multiple* instances of it. It is similar to a React component, which has only *one* component definition, but can have *multiple* component instances:
 
-如果有一个 JavaScript 类的定义存在，则可以创建它的 *多个* 实例。它类似 React component，它只有 *一个* 组件定义，但可以有 *多个* 实例:
+如果有一个 JavaScript 类的定义存在，则可以创建它的 *多个* 实例。它类似 React component，它只有 *一个* 组件定义，但可以有 *多个* 组件实例:
 
 > {title="src/App.js",lang="javascript"}
 > ~~~~~~~
@@ -122,18 +122,18 @@ function App() {
 function List() { ... }
 ~~~~~~~
 
-> Once we've defined a **component**, we can use it like an HTML **element** anywhere in our JSX. The element produces an **instance** of your component, or in other words, the component gets instantiated. It's not much different from a JavaScript class definition and usage.
+> Once we've defined a **component**, we can use it like an HTML **element** anywhere in our JSX. The element produces an **component instance** of your component, or in other words, the component gets instantiated. You can create as many component instances as you want. It's not much different from a JavaScript class definition and usage.
 
-一旦我们定义了 **组件**，我们就可以在 JSX 中任何地方像 HTML **元素** 一样使用它。元素会产生一个 **组件** 实例，换句话说，组件被实例化了。它与 JavaScript 的类定义和用法没有太大区别。
+一旦我们定义了 **组件**，我们就可以在 JSX 中任何地方像 HTML **元素** 一样使用它。元素会产生一个 **组件** 实例，换句话说，组件被实例化了。您可以根据需要创建任意数量的组件实例。它与 JavaScript 的类定义和用法没有太大区别。
 
 > ### Exercises:
 
 ### 练习：
 
-> * Familiarize yourself with the terms *component declaration*, *instance*, and *element*.
-> * Experiment by creating multiple instances of a List component.
+> * Familiarize yourself with the terms *component definition*, *component instance*, and *element*.
+> * Experiment by creating multiple component instances of a List component.
 > * Think about how it could be possible to give each List component its own `list`.
 
-* 熟悉术语 *组件定义*, *实例*, 和 *元素*。
-* 通过创建一个 List 组件的多个实例来做实验。
+* 熟悉术语 *组件声明*, *实例*, 和 *元素*。
+* 通过创建一个 List 组件的多个组件实例来进行实验。
 * 想想看，如何给每个 List 组件赋予自己的 `list` 属性。
