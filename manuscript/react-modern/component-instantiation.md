@@ -40,7 +40,7 @@ console.log(dennis.getName());
 // "Dennis Wieruch"
 ~~~~~~~
 
-If a JavaScript class definition exists, one can create *multiple* component instances of it. It is similar to a React component, which has only *one* component definition, but can have *multiple* instances:
+If a JavaScript class definition exists, one can create *multiple* instances of it. It is similar to a React component, which has only *one* component definition, but can have *multiple* component instances:
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
