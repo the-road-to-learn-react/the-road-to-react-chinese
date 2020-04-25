@@ -24,7 +24,7 @@ cd src
 touch List.js InputWithLabel.js SearchForm.js
 ~~~~~~~
 
-> Move every component from the *src/App.js* file in its own file, except for the List component which has to share its place with the Item component in the *src/List.js* file. Then in every file make sure to import React and to export the component which needs to be used from the file. For instance, in *src/List.js* file:
+> Move every component from the *src/App.js* file in its own file, except for the List component which has to share its place with the Item component in the *src/List.js* file. Then in every file make sure to import React and to export the component which needs to be used from the file. For example, in *src/List.js* file:
 
 将*src/App.js*文件中的每个组件移动到它自己的文件，除了List 组件必须与*src/List.js*中的Item组件共享它的位置。然后在每个文件中确保引入了React并从文件中导出需要被使用的组件。例如，*src/List.js*文件：
 
@@ -223,7 +223,22 @@ export default App;
 
 ### 练习:
 
-* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Folder-Structure).
-  * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/react-modern-final...hs/React-Folder-Structure?expand=1).
+> * Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Folder-Structure).
+
+* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Folder-Structure)
+
+> * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/react-modern-final...hs/React-Folder-Structure?expand=1).
+
+* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/react-modern-final...hs/React-Folder-Structure?expand=1)
+
+> * Read more about [JavaScript's import and export statements](https://www.robinwieruch.de/javascript-import-export).
+
 * 阅读更多关于 [JavaScript的输入和输出语句](https://www.robinwieruch.de/javascript-import-export).
-* 如果你有信心，就保持当前的文件结构。正在进行的部分将被省略，仅使用*src/App.js*文件。
+
+> * Read more about [React Folder Structures](https://www.robinwieruch.de/react-folder-structure).
+
+*阅读更多关于[React文件夹结构](https://www.robinwieruch.de/react-folder-structure)
+
+> * Keep the current folder structure if you feel confident. The ongoing sections will omit it, only using the *src/App.js* file.
+
+* 如果你有信心，就保持当前的文件夹结构。正在进行的部分将被省略，仅使用*src/App.js*文件。
