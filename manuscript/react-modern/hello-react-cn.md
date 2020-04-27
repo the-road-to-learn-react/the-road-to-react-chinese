@@ -40,7 +40,7 @@
 * 阅读关于[如何学习一个框架](https://www.robinwieruch.de/how-to-learn-framework/)
 > * Read more about [how to learn React](https://www.robinwieruch.de/learn-react-js).
 * 阅读关于[如何学习 React](https://www.robinwieruch.de/learn-react-js)
-> * Read more about [why framworks matter](https://www.robinwieruch.de/why-frameworks-matter).
+> * Read more about [why frameworks matter](https://www.robinwieruch.de/why-frameworks-matter).
 * 阅读关于[为什么框架很重要](https://www.robinwieruch.de/why-frameworks-matter)
 > * Scan through [JavaScript fundamentals needed for React](https://www.robinwieruch.de/javascript-fundamentals-react-requirements) -- without worrying too much about the React -- to test yourself about several JavaScript features used in React.
 * 浏览[React 所需的 JavaScript 基础](https://www.robinwieruch.de/javascript-fundamentals-react-requirements) -- 不太担心 React，看一下自己对 React 中用到的 JavaScript 特性了解多少
