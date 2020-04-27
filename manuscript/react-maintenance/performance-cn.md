@@ -194,7 +194,7 @@ B:List
 
 如果一个父组件重新渲染，他的子组件也会随之重新渲染。React 默认就会这么做，因为阻止子组件的重新渲染可能会导致很多问题，并且 React 的重新渲染机制执行的很快。
 
-> Sometimes we want to prevent re-rendering, however. For instance, huge data sets displayed in a table shouldn't re-render if they are not affected by an update. It's more efficient to perform an equality check if something changed for the component. Therefore, we can use React's memo API to make this equality check for the props:
+> Sometimes we want to prevent re-rendering, however. For example, huge data sets displayed in a table shouldn't re-render if they are not affected by an update. It's more efficient to perform an equality check if something changed for the component. Therefore, we can use React's memo API to make this equality check for the props:
 
 可是有时候我们想防止组件重新渲染。比如，如果表格中展示的巨大的数据集合并不受更新的影响，那么就不应该重新渲染。如果组件有所更改，则执行相等性的检查会更有效。因此我们可以使用 React 的 memo API 对 props 进行相等性检查：
 
@@ -346,7 +346,7 @@ const App = () => {
   * 确认 [上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/react-modern-final...hs/Performance-in-React?expand=1).
 * 阅读更多关于 [React 的 memo API](https://reactjs.org/docs/react-api.html#reactmemo).
 * 阅读更多关于 [React 的 useCallback Hook](https://reactjs.org/docs/hooks-reference.html#usecallback).
-> * Download *React Developer Tools* as an extension for your browser. Open it for your application in the browser via the browser's developer tools and try its various features. For instance, you can use it to visualize React's component tree and its updating components.
+> * Download *React Developer Tools* as an extension for your browser. Open it for your application in the browser via the browser's developer tools and try its various features. For example, you can use it to visualize React's component tree and its updating components.
 * 下载 *React 开发者工具* 作为浏览器拓展程序，并通过浏览器的开发者工具在浏览器的应用程序打开它，然后尝试其各种功能。比如，您可以用它可视化 React 组件树并且更新组件。
 > * Does the SearchForm re-render when removing an item from the List with the "Dismiss" button? If it's the case, apply performance optimization techniques to prevent re-rendering.
 * 使用“删除”按钮从 List 中移除一项时 SearchForm 会重新渲染吗？如果会的话，请使用上述性能优化的方法防止其重新渲染。
