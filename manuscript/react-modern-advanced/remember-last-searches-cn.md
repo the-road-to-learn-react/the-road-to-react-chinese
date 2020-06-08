@@ -14,6 +14,8 @@
 
 * 不要为这个功能使用新的 state。相反，重用 `url` state 和 `setUrl` state 更新函数来重新从 API 获取内容。将它们适配为 `urls` 状态，并且使用 `setUrls` 设置 `urls`。`urls` 中的最后一个 URL 可以用来获取数据，并且`urls` 中最后五个 URL 可以用来显示按钮。
 
+![](images/last-searches.png)
+
 > First, we will refactor all `url` to `urls` state and all `setUrl` to `setUrls` state updater functions. Instead of initializing the state with a `url` as a string, make it an array with the initial `url` as its only entry:
 
 首先，我们将所有的 `url` 重构到一个 `urls` state 中，同时将 `setUrl` 重构为 `setUrls` state 更新函数。与其使用字符串 `url` 初始化 state，倒不如把它变成一个数组，把初始的 `url` 作为其唯一的条目：

@@ -20,19 +20,21 @@
 
 > * Introduce a new sort state in the App or List component.
 
-  * 在App组件或者List组件中，引入一种新的排序状态。
+* 在App组件或者List组件中，引入一种新的排序状态。
 
 > * For each property (e.g. `title`, `author`, `points`, `num_comments`) implement an HTML button which sets the sort state for this property.
 
-  * 对于每个属性（例如：`title`, `author`, `points`, `num_comments`，）实现了一个HTML按钮，用来设置这个属性的排序状态。
+* 对于每个属性（例如：`title`, `author`, `points`, `num_comments`，）实现了一个HTML按钮，用来设置这个属性的排序状态。
 
 > * Use the sort state to apply an appropriate sort function on the `list`.
 
-  * 使用排序状态对`list`应用适当的排序函数
+* 使用排序状态对`list`应用适当的排序函数
 
 > * Using a utility library like [Lodash](https://lodash.com/) for its `sortBy` function is encouraged.
 
-  * 使用工具库比如[Lodash](https://lodash.com/)，它的`sortBy`函数是被鼓励的。
+* 使用工具库比如[Lodash](https://lodash.com/)，它的`sortBy`函数是被鼓励的。
+
+![](images/sort.png)
 
 > We will treat the list of data like a table. Each row represents an item of the list and each column represents one property of the item. Headers provide the user more guidance about each column:
 

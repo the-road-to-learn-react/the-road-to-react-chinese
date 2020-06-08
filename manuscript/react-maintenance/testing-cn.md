@@ -14,6 +14,8 @@
 
 我们希望有许多单元测试来覆盖函数和组件。之后，我们可以使用一部分集成测试来确保最重要的函数和组件按照我们预期的方式协作。最后，我们或许需要一些端到端测试来模拟关键情景。在这次学习中，我们将覆盖**单元测试和集成测试**，以及一种被称为**快照测试**的特殊的组件测试技术。**端到端测试**将是本次练习的一部分。
 
+![](images/testing-pyramid.png)
+
 > Since there are [many testing libraries](https://www.robinwieruch.de/react-testing-tutorial), it can be challenging to choose one as a beginner to React. We will use [Jest](https://jestjs.io/) by Facebook as a testing framework to avoid making this tutorial too opinionated. Most of the other testing libraries for React use Jest as foundation, so it's a good introduction.
 
 由于有[许多测试库](https://www.robinwieruch.de/react-testing-tutorial)，对于初学者来说从中选择一个可能是一个挑战。我们将使用 FaceBook 的 [Jest](https://jestjs.io/) 作为测试框架，以避免让本教程过于主观。其他大部分 React 的测试库以 Jest 作为基础，所以这也是其足够好的一个证明。

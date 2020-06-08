@@ -10,9 +10,13 @@ React 应用中写样式的方法有很多，关于最好的**样式策略** and
 
 我们将从React中常见的CSS样式开始，但随后我们将探讨两种更高级的**CSS-in-CSS**（**CSS模块**）和**CSS-in-JS**（**样式组件**）策略。CSS模块和样式化组件只是这两组策略中的两种方法。我们也将介绍如何在React应用程序中包含可扩展的矢量图形（SVG），如徽标或图标等。
 
+![](images/css-style-strategies.png)
+
 > If you don't want to build common UI components (e.g. button, dialog, dropdown) from scratch, you can always pick a [popular UI library suited for React](https://www.robinwieruch.de/react-libraries), which provides these components by default. However, it is better for learning React if you try building these components before using a pre-built solution. As a result, we won't use any of the UI component libraries.
 
 如果你不想从头开始构建常见的UI组件（如按钮、对话框、下拉菜单），你可以选择一个[适合React流行的UI库](https://www.robinwieruch.de/react-libraries)，它默认提供了这些组件。不过，如果你在使用预构建的解决方案之前，先尝试着构建这些组件，对学习React更好。因此，我们将不会使用任何一个UI组件库。
+
+![](images/ui-library.png)
 
 > The following styling approaches and SVGs are pre-configured in `create-react-app`. If you're in control of the build tools (e.g. Webpack), they might need to be configured to import CSS or SVG files. Since we are using create-react-app, we can use these files as assets right away.
 

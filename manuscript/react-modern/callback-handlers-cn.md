@@ -51,6 +51,8 @@ const Search = () => {
 
 我们有一个抽取出的 Search 组件，它可以处理 state 并且显示 state 但没有暴露出它的内容。该组件将 `searchTerm` 显示为文本，但并未与父级或同级组件共享此信息。由于 Search 组件除了显示搜索项外什么也不做，因此它对其他组件毫无用处。
 
+![](images/callback-handler.png)
+
 > There is no way to pass information as JavaScript data types up the component tree, since props are naturally only passed downwards. However, we can introduce a **callback handler** as a function: A callback function gets introduced (A), is used elsewhere (B), but "calls back" to the place it was introduced (C).
 
 由于 props 只能往下传递，因此无法将 JavaScript 数据信息沿组件树网上传递。但是，我们可以引入**回调函数**: 回调函数被引入 (A), 在其他地方使用了回调函数 (B), 但调用在回调函数的位置 (C)。

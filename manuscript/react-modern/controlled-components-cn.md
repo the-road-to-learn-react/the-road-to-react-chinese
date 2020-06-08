@@ -71,6 +71,8 @@ const Search = props => (
 
 现在输入栏开始用 React state 中的 `searchTerm` 作为正确的初始值。并且当我们改变 `searchTerm`的值时，我们强制输入栏使用了 React state 中的值 （通过 props）。而之前输入栏仅仅是以原生 HTML 的方式管理着自己的内部状态。
 
+![](images/controlled-component.png)
+
 > We learned about controlled components in this section, and, taking all the previous sections as learning steps into consideration, discovered another concept called **unidirectional data flow**:
 
 我们在这一节学习了受控组件，再结合之前学习过程中的所有章节，可以发现另一个被称为**单向数据流**的概念。

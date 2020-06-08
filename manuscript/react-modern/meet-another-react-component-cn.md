@@ -79,6 +79,8 @@ function App() {
 
 你刚刚创建了第一个React组件！通过这个例子，我们可以看到那些封装的有意义任务的组件是如何在更大的React应用中工作的。
 
+![](images/component-tree.png)
+
 > Larger React applications have **component hierarchies** (also called **component trees**). There is usually one uppermost **entry point component** (e.g. App) that spans a tree of components below it. The App is the **parent component** of the List, so the List is a **child component** of the App. In a component tree, the App is the **root component**, and the components that don't render any other components are called **leaf components** (e.g. List). The App can have multiple children, as can the List. If the App has another child component, the additional child component is called a **sibling component** of the List.
 
 大一点的React应用具备**组件层次结构**(也称为**组件树**)。一般来说最顶层的**入口组件**(比如：APP)会在它里面嵌套组件树。App组件是List组件的**父组件**，相应的，List组件也是App组件的**子组件**。在组件树中，App是**根组件**，这个组件不会渲染其他**叶子组件**(比如： List)。App可以有多个子组件，List组件也是。如果App组件有其他子组件，那这个子组件称为List组件的**兄弟组件**。

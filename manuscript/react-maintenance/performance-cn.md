@@ -259,6 +259,8 @@ const App = () => {
 
 因为回调函数在函数签名中获取了作为参数传递的 `item`，所以它没有任何依赖关系，并且只在 App 组件初始渲染的时候被声明了一次。传递给 List 组件的 props 都不应该变化，尝试着将 `memo` 和 `useCallback` 一起使用来搜索输入在 SearchForm 中的内容。
 
+![](images/memo.png)
+
 > While all props passed to a component stay the same, the component renders again if its parent component is forced to re-render. That's React's default behavior, which works most of the time because the re-rendering mechanism is fast enough. However, if re-rendering decreases the performance of a React application, `memo` helps prevent re-rendering.
 
 虽然传递给组件的所有的 props 都保持不变，但是如果它们的父组件强制重新渲染，那么它们也会再次渲染。这是 React 的默认行为，因为重新渲染的机制足够快，所以它在大多数情况下都是这么运作。但是，如果重新渲染降低了 React 应用的性能，那么 `memo` 将有助于防止重新渲染。
@@ -311,6 +313,8 @@ const App = () => {
 
 如果所有的参数都传递给函数，那么就可以允许在组件外部使用它。它防止了每次渲染都创建一个函数，因此 `useCallback` Hook 变得没那么必要了。但该函数仍然在每次渲染时计算 comments 的总和，这对于更大开销的计算来说就成为了一个问题。
 
+![](images/usememo-1.png)
+
 > Each time text is typed in the input field of the SearchForm component, this computation runs again with an output of "C". This may be fine for a non-heavy computation like this one, but imagine this computation would take more than 500ms. It would give the re-rendering a delay, because everything in the component has to wait for this computation. We can tell React to only run a function if one of its dependencies has changed. If no dependency changed, the result of the function stays the same. React's useMemo Hook helps us here:
 
 每一次在 SearchForm 组件输入内容时，此计算都会再次输出 “C”。对于像这种没那么大的开销的计算来说还可以接受，但是可以想象一下如果计算时间要花费500毫秒以上，这会给重新渲染带来延迟，因此组件中所有的组件都必须等待此计算。我们可以告诉 React 仅在其依赖项之一改变的情况下运行函数，如果未更改任何依赖关系，那么函数结果将保持不变。React 的 useMemo Hook 在这里为我们提供了帮助：
@@ -333,6 +337,8 @@ const App = () => {
 > For every time someone types in the SearchForm, the computation shouldn't run again. It only runs if the dependency array, here `stories`, has changed. After all, this should only be used for cost expensive computations which could lead to a delay of a (re-)rendering of a component.
 
 每次在 SearchForm 中输入内容的时候，不会再次计算，只有当依赖项的数组（在这儿指 `stories`）改变时才会再次运行。毕竟，这只应用于那些因计算量开销很大而导致渲染（或重新渲染）时造成延迟的组件。
+
+![](images/usememo-2.png)
 
 > Now, after we went through these scenarios for `useMemo`, `useCallback`, and `memo`, remember that these shouldn't necessarily be used by default. Apply these performance optimization only if you run into a performance bottlenecks. Most of the time this shouldn't happen, because React's rendering mechanism is pretty efficient by default. Sometimes the check for utilities like `memo` can be more expensive than the re-rendering itself.
 

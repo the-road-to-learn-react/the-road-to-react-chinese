@@ -111,6 +111,8 @@ function App() {
 
 实际上，我最初的 React "Aha" 瞬间之一是使用准系统 JavaScript 来将 JavaScript 对象列表映射到 HTML 元素，而没有任何其他 HTML 模板语法。 它只是 HTML 中的 JavaScript。
 
+![](images/jsx-mapping.png)
+
 > React will display each item now, but you can still improve your code so React handles advanced dynamic lists more gracefully. By assigning a key attribute to each list item's element, React can identify modified items if the list changes (e.g. re-ordering). Fortunately, our list items come with an identifier:
 
 React 现在会显示每个项目，但是你仍然可以改进代码，以便 React 更优雅地处理高级动态列表。 通过为每个列表项的元素分配 key 属性，React 可以在列表发生更改（例如重新排序）时识别已修改的项目。 幸运的是，我们的列表项带有一个标识符：

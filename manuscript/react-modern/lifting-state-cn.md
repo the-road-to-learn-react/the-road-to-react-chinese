@@ -185,6 +185,8 @@ const App = () => {
 
 这就是 filter 函数的内联函数的重构步骤。它有许多变体，在可读性和简洁性之间保持平衡并不总是那么简单。然而，我觉得只要尽可能保持简洁就能够在大部分时间保持可读性。
 
+![](images/component-communication.png)
+
 > Now we can manipulate state in React, using the Search component's callback handler in the App component to update it. The current state is used as a filter for the list. With the callback handler, we used information from the Search component in the App component to update the shared state and indirectly in the List component for the filtered list.
 
 现在，我们可以在 App 组件中使用 Search 组件的回调函数来更新状态，从而在 React 中操作状态。当前状态用作列表的过滤器。通过回调处理函数，我们使用了来自 App 组件中的 Search 组件的信息来更新共享状态，并间接地在 List 组件中获取了过滤后的列表。
