@@ -3,7 +3,7 @@
 
 > Next we'll focus on the input field and label, by separating a standalone Search component and creating an instance of it in the App component. Through this process, the Search component becomes a sibling of the List component, and vice versa. We'll also move the handler and the state into the Search component to keep our functionality intact.
 
-接下来，我们将专注在输入字段和标签，通过分离一个独立的 Search 组件, 并在 App 组件中创建一个实例。通过这个过程，Search 组件将成为 List 组件同级， 反之亦然。我们还将移动处理程序和 state 到 Search 组件来保持我们功能的完整性。
+接下来，我们将专注在输入字段和标签，通过分离一个独立的 Search 组件, 并在 App 组件中创建一个实例。通过这个过程，Search 组件将成为 List 组件的兄弟组件， 反之亦然。我们还将把处理函数和 state 移动到 Search 组件来保持我们功能的完整性。
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -105,7 +105,7 @@ const Search = props => {
 
 > Use comments in your source code to omit A, B, and C, as these are reminders which task each block of code is to perform. Consider the concept of the callback handler: We pass a function from one component (App) to another component (Search); we use it in the second component (Search); but use the actual callback of the function call in the first component (App). This way, we can communicate up the component tree. A handler function used in one component becomes a callback handler, which is passed down to components via React props. React props are always passed down as information the component tree, and callback handlers passed as functions in props can be used to communicate up the component hierarchy.
 
-在您的代码中使用可以省略掉注释 A，B 和 C，因为它们只是在提醒每个代码块要执行的任务。考虑一下回调函数的概念：我们将一个函数从一个组件(App)传递到另一个组件(Search); 我们在第二个组件中调用它(Search); 但实际上在第一个组件(App)中执行。这样，我们就能在组件中往上传递。一个组件中使用的处理函数成为回调处理程序，并将该函数通过 React props 传递给其他组件。React props 在组件树中始终将信息往下传递，而作为回调函数作为 props 传递时可以用来和上层组件通信。
+在您的代码中使用可以省略掉注释 A，B 和 C，因为它们只是在提醒每个代码块要执行的任务。考虑一下回调函数的概念：我们将一个函数从一个组件(App)传递到另一个组件(Search); 我们在第二个组件中调用它(Search); 但实际上它在第一个组件(App)中被执行。这样，我们就能在组件中往上传递信息。一个组件中使用的处理函数成为回调处理程序，并将该函数通过 React props 传递给其他组件。React props 在组件树中始终将信息往下传递，而回调函数作为 props 传递时可以用来和上层组件通信。
 
 > ### Exercises:
 
