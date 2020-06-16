@@ -4,7 +4,7 @@
 
 > In the Road to React, we'll use [create-react-app](https://github.com/facebook/create-react-app) to bootstrap your application. It's an opinionated yet zero-configuration starter kit for React introduced by Facebook in 2016, which is [recommended for beginners by 96% of React users](https://twitter.com/dan_abramov/status/806985854099062785). In *create-react-app*, the tools and configurations evolve in the background, while the focus remains on the application's implementation.
 
-在本书中，我们将使用 [create-react-app](https://github.com/facebook/create-react-app) 来引导创建你的应用程序。这是 Facebook 在 2016 年针对 React 推出的零配置的入门工具包，该工具集成的内容是 Facebook 官方的主观想法，[96% 的 React 用户都会将它推荐给初学者](https://twitter.com/dan_abramov/status/806985854099062785)。使用 *create-react-app* 各种工具和配置都会发生在后台，而只需要将重点放在应用程序的实现上。
+在本书中，我们将使用 [create-react-app](https://github.com/facebook/create-react-app) 来引导创建你的应用程序。这是 Facebook 在 2016 年针对 React 推出的零配置入门工具包，该工具集成的内容是 Facebook 官方的主观想法，[96% 的 React 用户都会将它推荐给初学者](https://twitter.com/dan_abramov/status/806985854099062785)。使用 *create-react-app* 时，各种工具和配置都发生在后台，而开发者只需将重点放在应用程序的实现上。
 
 > After installing Node and npm, use the command line to type the following command in a dedicated folder for your project. We'll refer to this project as *hacker-stories*, but you may choose any name you like:
 
@@ -17,7 +17,7 @@ npx create-react-app hacker-stories
 
 > Navigate into your new folder after the setup has finished:
 
-设置完成后，导航至新文件夹：
+初始化完成后，进入生成的项目文件夹：
 
 {title="Command Line",lang="text"}
 ~~~~~~~
