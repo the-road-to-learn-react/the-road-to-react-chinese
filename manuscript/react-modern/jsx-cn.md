@@ -2,7 +2,7 @@
 
 > Recall that I mentioned the returned output of the App component resembles HTML. This output is called JSX, which mixes HTML and JavaScript. Let's see how this works for displaying the variable:
 
-回想一下，我提到 App 组件返回的输出类似于 HTML。此输出称为 JSX，它将 HTML 和 JavaScript 混合在一起。让我们看看它如何展示变量：
+回想一下，我提到 App 组件返回的类似 HTML 的输出。此输出称为 JSX，它将 HTML 和 JavaScript 混合在一起。让我们看看它如何展示变量：
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
 import React from 'react';
