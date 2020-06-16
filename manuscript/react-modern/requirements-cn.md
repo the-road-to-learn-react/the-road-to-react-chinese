@@ -4,7 +4,7 @@
 
 > To follow this book you'll need to be familiar with the basics of web development, i.e how to use HTML, CSS, and JavaScript. It also helps to understand [APIs](https://www.robinwieruch.de/what-is-an-api-javascript/), as they will be covered thoroughly.
 
-要阅读这本书，你需要熟悉 Web 开发的基础知识，例如怎样使用 HTML，CSS 和 JavaScript。这也有助于理解 [APIs](https://www.robinwieruch.de/what-is-an-api-javascript/)，因为它们将会覆盖全文。
+阅读本书之前，你需要熟悉 Web 开发的基础知识，例如怎样使用 HTML，CSS 和 JavaScript。这也有助于理解 [APIs](https://www.robinwieruch.de/what-is-an-api-javascript/)，因为它们将会覆盖全文。
 
 > ### Editor and Terminal
 
@@ -20,7 +20,7 @@
 
 > Optionally, I recommend managing projects in GitHub while we conduct the exercises in this book, and I've provided a [short guide](https://www.robinwieruch.de/git-essential-commands/) on how to use these tools. Github has excellent version control, so you can see what changes were made if you make a mistake or just want a more direct way to follow along. It's also a great way to share your code later with other people.
 
-可选地，我推荐在进行本书中的练习时在 GitHub 中管理项目，并且我提供了有关如何使用这些工具的[简短指南](https://www.robinwieruch.de/git-essential-commands/)。 Github 具有出色的版本控制，因此，如果你犯了错误或者只是想采用一种更直接的方式来执行操作，则可以看到你所做的更改。 这也是以后与他人共享代码的好方法。
+可选地，我推荐使用 GitHub 来管理本书中的练习项目，并且我提供了有关如何使用这些工具的[简短指南](https://www.robinwieruch.de/git-essential-commands/)。 Github 极为出色的版本控制，让你在犯了错误或者只是想采用一种更直接的方式来执行操作时，可以看到你所做的更改。 这也是以后与他人共享代码的好方法。
 
 > If you don't want to set up the editor/terminal combination or IDE on your local machine, [CodeSandbox](https://codesandbox.io/), an online editor, is also a viable alternative. While CodeSandbox is a great tool for sharing code online, a local machine setup is a better tool for learning the different ways to create a web application. Also, if you want to develop applications professionally, a local setup will be required.
 
