@@ -84,7 +84,7 @@ UI -> Side-Effect -> State -> UI -> ...
 
 > A React application and its components start with an initial state, which may be passed down as props to other components. It's rendered for the first time as a UI. Once a side-effect occurs, like user input or data loading from a remote API, the change is captured in React's state. Once state has been changed, all the components affected by the modified state or the implicitly modified props are re-rendered (the component functions runs again).
 
-一个 React 应用和其中的组件一开始都有一个初始 state, 可能通过 props 的方式向下传给其他组件。它会在第一次时被渲染成 UI 。一旦副作用发生，比如用户输入或者从远端 API 导致的数据加载，这个改变会在 React state 中被捕获。而一旦 state 被改变，所有受到改变的 state 或者被暗中改变的 props 影响的组件将重新渲染（组件的函数会被重新调用）。
+一个 React 应用和其中的组件一开始都有一个初始 state, 可能通过 props 的方式向下传给其他组件。它会在第一次时被渲染成 UI 。一旦副作用发生，比如用户输入或者从远端 API 加载数据，这个改变会在 React state 中被捕获。而一旦 state 被改变，所有受到改变的 state 或者被暗中改变的 props 影响的组件将重新渲染（组件的函数会被重新调用）。
 
 > In the previous sections, we also learned about React's **component lifecycle**. At first, all components are instantiated from the top to the bottom of the component hierarchy. This includes all hooks (e.g. `useState`) that are instantiated with their initial values (e.g. initial state). From there, the UI awaits side-effects like user interactions. Once state is changed (e.g. current state changed via state updater function from `useState`), all components affected by modified state/props render again.
 
@@ -106,4 +106,4 @@ UI -> Side-Effect -> State -> UI -> ...
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Controlled-Components)。
 * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lifting-State-in-React...hs/React-Controlled-Components?expand=1)。
 * 阅读更多关于[ React 受控组件](https://www.robinwieruch.de/react-controlled-components/)的文章。
-* 在你的 React 组件中通过 `console.log()` 进行尝试并观察你的改变是怎么渲染的，包括初始时和输入栏改变之后。
+* 尝试在你的 React 组件中通过 `console.log()` 观察你的改变是怎么渲染的，包括初始时和输入栏改变之后。
