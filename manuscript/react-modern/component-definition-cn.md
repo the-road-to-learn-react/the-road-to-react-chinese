@@ -22,7 +22,7 @@ const () => { ... }
 
 > You can remove the parentheses in an arrow function expression if it has only one argument, but multiple arguments require parentheses:
 
-在声明箭头函数时，如果只有一个参数，可以把括号去掉。但有多个参数的时候，括号必须的：
+在声明箭头函数时，如果只有一个参数，可以把括号去掉。但有多个参数的时候，括号是必须的：
 
 {title="Code Playground",lang="javascript"}
 
@@ -117,7 +117,7 @@ count =>
 
 > This can be done for the App and List component as well, because they only return JSX and don't perform any task in between. Again it also applies for the arrow function that's used in the map function:
 
-这也可以应用在 App 和 List 组件上，它们除了返回 JSX 中间什么都没做。同样也可以用在 map 里的箭头函数上：
+这也可以应用在 App 和 List 组件上，因为它们除了返回 JSX 之外什么都没做。同样也可以用在 map 里的箭头函数上：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
