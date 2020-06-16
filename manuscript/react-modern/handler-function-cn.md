@@ -63,7 +63,7 @@ const App = () => {
 
 > After opening your application in a web browser, open the browser's developer tools to see logging occur after you type into the input field. This is called a **synthetic event** defined by a JavaScript object. Through this object, we can access the emitted value of the input field:
 
-在浏览器中打开应用之后，再打开浏览器的开发者工具，就可以看到在输入框打字之后的日志了。这被称之为**合成事件**，由一个 JavaScript 对象构成。通过这个对象，我们可以拿到输入框发出的值：
+在浏览器中打开应用之后，再打开浏览器的开发者工具，就可以看到在输入框打字之后的日志了。这被称为**合成事件**，由一个 JavaScript 对象构成。通过这个对象，我们可以拿到输入框发出的值：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
