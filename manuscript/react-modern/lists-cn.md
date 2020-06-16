@@ -42,7 +42,7 @@ export default App;
 
 > Each item in the list has a title, a url, an author, an identifier (`objectID`), points -- which indicate the popularity of an item -- and a count of comments. Next, we'll render the list within our JSX dynamically:
 
-列表中的每个项目都有一个标题，一个 URL，一个作者，一个标识符（`objectID`），points 要点-表示该项目的受欢迎程度-以及评论数。 接下来，我们将在 JSX 中动态渲染列表
+列表中的每个项目都有一个标题，一个 URL，一个作者，一个标识符（`objectID`），分数（表示该项目的受欢迎程度）以及评论数。 接下来，我们将在 JSX 中动态渲染列表
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
