@@ -4,7 +4,7 @@
 
 > Now we'll discover how to use a React element in the same fashion as an HTML element, with an opening and closing tag:
 
-现在我们将要学习如何像 HTML 元素一样使用 React 元素，通过一个开合标签：
+现在我们将要学习如何通过一个开合标签，像 HTML 元素一样使用 React 元素：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -33,7 +33,7 @@ const App = () => {
 
 > Instead of using the `label` prop from before, we inserted the text "Search:" between the component's element's tags. In the InputWithLabel component, you have access to this information via **React's children** prop. Instead of using the`label` prop, use the children`prop to render everything that has been passed down from above where you want it:
 
-不像之前使用 `label` prop 那样，而是把 “Search” 字样放在了组件元素标签之间。在组件 InputWithLabel 里，可以通过 **React 的 children** prop 来获取这个信息。不使用 `label` prop，而是用 children prop 来渲染所有从上层传下来的东西，在需要的地方：
+不像之前使用 `label` prop 那样，而是把 “Search” 字样放在了组件元素标签之间。在组件 InputWithLabel 里，可以通过 **React 的 children** prop 来获取这个信息。不使用 `label` prop，而是用 children prop 在需要的地方渲染所有从上层传下来的东西：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
