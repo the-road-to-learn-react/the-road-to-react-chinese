@@ -38,7 +38,7 @@ console.log(firstName + ' ' + lastName);
 
 > If we need to access multiple properties of an object, using one line of code instead of multiple lines is often simpler and more elegant. That's why object destructuring is already widely used in JavaScript. Let's transfer this knowledge to the React props in our Search component. First, we have to refactor the Search component's arrow function from concise body into block body:
 
-如果我们需要访问一个对象的多个属性，用一行代码来代替多行代码往往更简单、更优雅。这就是为什么在 JavaScript 中已经广泛使用对象解构的原因。让我们把这些知识运用到我们的 Search 组件中的 React props 上。首先，我们要把Search 组件的箭头函数从简写体重构成块状体：
+如果我们需要访问一个对象的多个属性，用一行代码来代替多行代码往往更简单、更优雅。这就是为什么在 JavaScript 中已经广泛使用对象解构的原因。让我们把这些知识运用到我们的 Search 组件中的 React props 上。首先，我们要把 Search 组件的箭头函数从简写体重构成块状体：
 
 {title="src/App.js",lang="javascript"}
 
@@ -116,7 +116,7 @@ const Search = ({ search, onSearch }) => (
 
 > React's `props` are rarely used in components by themselves; rather, all the information that is contained in the `props` object is used. By destructuring the `props` object right away in the function signature, we can conveniently access all information without dealing with its `props` container. This should be the basic lesson learned from this section, however, we can take this one step further with the following advanced lessons.
 
-React `props` 本身很少在组件中使用，相反，所有包含在 `props` 对象中的信息都会被使用。通过在函数签名中马上解构 `props` 对象，我们可以方便地访问所有信息，而不需要处理 `props` 容器。这是本节的基本知识，然而，我们可以通过下面的高级课程更进一步。
+React `props` 本身很少在组件中使用，相反，所有包含在 `props` 对象中的信息都会被使用。通过在函数签名中马上解构 `props` 对象，我们可以方便地访问所有信息，而不需要处理 `props` 容器。这是本节的基本知识，不过，我们可以通过下面的高级课程更进一步。
 
 > Let's check out another scenario to dive deeper into advanced props handling in React: In order to prepare for this scenario, we will extract a new Item component from the List component with the previous lesson learned about object destructuring for React's `props` object:
 
@@ -183,7 +183,7 @@ console.log(firstName + ' has a pet called ' + name);
 
 > Nested destructuring helps us to access properties from objects which are deeply nested (e.g. the pet's name of a user). Now, in our Item components, because the `item` object is never directly used in the Item component's JSX elements, we can perform a *nested destructuring* in the component's function signature too:
 
-嵌套解构可以帮助我们从深度嵌套的对象中访问其属性（比如说 user 的 pet name）。现在，在我们的 Item 组件中，由于 item 对象从来没有在 Item 组件的 JSX 元素中被直接使用过，所以我们也可以在组件的函数签名中进行嵌套解构：
+嵌套解构可以帮助我们从深度嵌套的对象中访问其属性（比如说 user 中 pet 的 name 属性）。现在，在我们的 Item 组件中，由于 item 对象从来没有在 Item 组件的 JSX 元素中被直接使用过，所以我们也可以在组件的函数签名中进行嵌套解构：
 
 {title="src/App.js",lang="javascript"}
 
