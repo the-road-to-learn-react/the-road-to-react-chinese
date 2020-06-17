@@ -4,7 +4,7 @@
 
 >  Next we'll add a feature to our Search component in the form of another React hook. We'll make the Search component remember the most recent search interaction, so the application opens it in the browser whenever it restarts.
 
-接下来我们要给搜索组件增加一个新的功能，让搜索组件记住最近一次搜索操作，这样每次重启之后，应用就会在浏览器里把它打开。
+接下来我们要给 Search 组件增加一个新的功能，让 Search 组件记住最近一次搜索操作，这样每次重启之后，应用就会在浏览器里把它打开。
 
 > First, use the local storage of the browser to store the `searchTerm` accompanied by an identifier. Next, use the stored value, if there a value exists, to set the initial state of the `searchTerm`. Otherwise, the initial state defaults to our initial state (here "React") as before:
 
@@ -39,7 +39,7 @@ const App = () => {
 
 > There is one flaw, though. The handler function should mostly be concerned about updating the state, but now it has a side-effect. If we use the `setSearchTerm` function elsewhere in our application, we will break the feature we implemented because we can't be sure the local storage will also get updated. Let's fix this by handling the side-effect at a dedicated place. We'll use **React's useEffect Hook** to trigger the side-effect each time the `searchTerm` changes:
 
-不过这里还有个问题。处理函数应该只关心如何更新状态，但它现在还有一个副作用。如果我们在应用的其他地方调用 `setSearchTerm` 就可能会破坏已有功能，因为无法确定本地缓存是否也会被更新。我们可以通过把对副作用的处理固定在某个地方来解决这个问题。这里将用到 **React 的 useEffect Hook** 来触发副作用，每次 `searchTerm` 发生变化的时候：
+不过这里还有个问题。处理函数应该只关心如何更新状态，但它现在还有一个副作用。如果我们在应用的其他地方调用 `setSearchTerm` 就可能会破坏已有功能，因为无法确定本地缓存是否也会被更新。我们可以通过把对副作用的处理固定在某个地方来解决这个问题。这里将在每次 `searchTerm` 发生变化的时候，用到 **React 的 useEffect Hook** 来触发副作用：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -76,7 +76,7 @@ React 的 useEffect Hook 需要两个参数：第一个参数是一个会产生�
 
 > Using React `useEffect` instead of managing the side-effect in the handler has made the application more robust. *Whenever* and *wherever* `searchTerm` is updated via `setSearchTerm`, local storage will always be in sync with it.
 
-通过 React 的 `useEffect` 来管理副作用，而不是处理函数，会让我们的应用更加健壮。无论*何时何地* 使用 `setSearchTerm` 更新 `searchTerm`，本地存储都会同步更新。
+使用 React 的 `useEffect` 而不是处理函数来管理副作用，会让我们的应用更加健壮。无论*何时何地* 使用 `setSearchTerm` 更新 `searchTerm`，本地存储都会同步更新。
 
 
 
