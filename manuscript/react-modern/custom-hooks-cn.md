@@ -4,7 +4,7 @@
 
 > Thus far we've covered the two most popular hooks in React: useState and useEffect. useState is used to make your application interactive; useEffect is used to opt into the lifecycle of your components.
 
-到这里我们已经讲到了 React 里两个最常用的 hook：useState 和 useEffect。useState 用来使你的应用和用户产生交互；useEffect 可以让组件有选择地使用生命周期。
+到这里我们已经讲到了 React 里两个最常用的 hook：useState 和 useEffect。useState 用来使你的应用可交互；useEffect 可以让组件有选择地使用生命周期。
 
 > We'll eventually cover more hooks that come with React -- in this volume and in other resources -- though we won't cover all of them here. Next we'll tackle **React custom Hooks**; that is, building a hook yourself.
 
@@ -151,7 +151,7 @@ const App = () => {
 
 > Since the key comes from outside, the custom hook assumes that it could change, so it needs to be included in the dependency array of the `useEffect` hook. Without it, the side-effect may run with an outdated key (also called *stale*) if the key changed between renders.
 
-因为键值来自外部，自定义 hook 假设它可能会发生变化，所以要把它放到 `useEffect` 的依赖数组里。如果不做这一步，副作用就可能会使用过期的键值，当键值在不同的渲染之间产生了变化的时候。
+因为键值来自外部，自定义 hook 假设它可能会发生变化，所以要把它放到 `useEffect` 的依赖数组里。如果不做这一步，当键值在不同的渲染之间产生了变化的时候，副作用就可能会使用过期的键值。
 
 > Another improvement is to give the custom hook the initial state we had from the outside:
 
