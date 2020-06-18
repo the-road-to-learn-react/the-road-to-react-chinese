@@ -4,7 +4,7 @@
 
 > The previous sections have taught you about handlers, callback handlers, and inline handlers. Now we'll introduce a **memoized handler**, which can be applied on top of handlers and callback handlers. For the sake of learning, we will move all the data fetching logic into a standalone function outside the side-effect (A); wrap it into a `useCallback` hook (B); and then invoke it in the `useEffect` hook (C):
 
-前一节我们讲了处理函数、回调函数以及内联函数。现在我们将介绍**memoized 处理函数**，它可以被用于处理函数和回调函数的最顶层，接下来我们会把所有的数据请求的逻辑移动至副作用外部的一个单独的函数中（A）；然后将其用`useCallback` Hook 包裹（B）；并且在`useEffect` Hook 中调用它。
+前一节我们讲了处理函数、回调函数以及内联函数。现在我们将介绍**memoized 处理函数**，它可以被用于处理函数和回调函数的最顶层，接下来我们会把所有的数据请求的逻辑移动至副作用外部的一个单独的函数中（A）；然后将其用 `useCallback` Hook 包裹（B）；并且在 `useEffect` Hook 中调用它。
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -76,7 +76,7 @@ const App = () => {
 
 > The `useCallback` hook changes the function only when the search term changes. That's when we want to trigger a re-fetch of the data, because the input field has new input and we want to see the new data displayed in our list.
 
-只有当搜索内容改变时 `useCallback` Hook 才会更改函数。那时当我们想触发重新获取数据时，因为输入字段中有新的输入，并且我们希望看到列表中展示新的数据。
+只有当搜索内容改变时 `useCallback` Hook 才会更改函数。那是当我们想触发重新获取数据时，因为输入字段中有新的输入，并且我们希望看到列表中展示新的数据。
 
 > By moving the data fetching function outside the `useEffect` hook, it becomes reusable for other parts of the application. We won't use it just yet, but it is a way to understand the `useCallback` hook. Now the `useEffect` hook runs implicitly when the `searchTerm` changes, because the `handleFetchStories` is re-defined each time the `searchTerm` changes. Since the `useEffect` hook depends on the `handleFetchStories`, the side-effect for data fetching runs again.
 
