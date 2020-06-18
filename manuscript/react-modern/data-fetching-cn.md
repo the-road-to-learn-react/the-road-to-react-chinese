@@ -50,7 +50,7 @@ const App = () => {
 
 > In the previous code example we used [JavaScript's Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) for a string interpolation. When this feature wasn't available in JavaScript, we'd have used the + operator on strings instead:
 
-在上面的代码示例中，我们使用了 [JavaScript's Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) 进行字符串插值。在 JavaScript 中没有这个功能的时候，我们会在字符串上使用 + 运算符来代替。
+在上面的代码示例中，我们使用了 [JavaScript 的模版字符串](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) 进行字符串插值。在 JavaScript 中没有这个功能的时候，我们会在字符串上使用 + 运算符来代替。
 
 {title="Code Playground",lang="javascript"}
 ~~~~~~~
@@ -85,4 +85,4 @@ console.log(anotherWelcome);
   * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Impossible-States...hs/Data-Fetching-with-React?expand=1)
 * 通读 [Hacker News](https://news.ycombinator.com/) 和它的 [API](https://hn.algolia.com/api)
 * 阅读更多关于连接到远程 API 的 [浏览器原生 fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* 阅读更多关于 [JavaScript 模板插值](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
+* 阅读更多关于 [JavaScript 模板字符串](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
