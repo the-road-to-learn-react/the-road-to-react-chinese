@@ -136,7 +136,7 @@ const App = () => {
 
 > Conditional rendering is not just for asynchronous data though. The simplest example of conditional rendering is a boolean flag state that's toggled with a button. If the boolean flag is true, render something, if it is false, don't render anything.
 
-条件渲染不仅适用于异步数据，最简单的例子是使用按钮切换一个布尔标志的 state，如果表示是 true，则渲染某些内容，如果是 false，则不渲染任何内容。
+条件渲染不仅适用于异步数据，最简单的例子是使用按钮切换一个布尔标志的 state，如果是 true，则渲染某些内容，如果是 false，则不渲染任何内容。
 
 > This feature can be quite powerful, because it gives you the ability to conditionally render JSX. It's yet another tool in React to make your UI more dynamic. And as we've discovered, it's often necessary for more complex control flows like asynchronous data.
 
