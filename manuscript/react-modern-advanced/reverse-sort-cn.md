@@ -8,7 +8,7 @@
 
 > **Optional Hints:**
 
-**可选择的提示:**
+**可选的提示:**
 
 > * Consider that reverse or normal sort could be just another state (e.g. `isReverse`) next to the `sortKey`.
 
@@ -42,7 +42,7 @@ const List = ({ list, onRemoveItem }) => {
 
 > Next, give the sort handler logic to see if the incoming `sortKey` triggers are a normal or reverse sort. If the `sortKey` is the same as the one in the state, it could be a reverse sort, but only if the sort state wasn't already reversed:
 
-接下来，给排序处理函数添加一些逻辑判断传入的 `sortKey` 触发器是正常排序还是逆序排序。如果 `sortKey` 与 state 中的相同，则可能是逆序排序，但前提是排序的状态还没有反转：
+接下来，给排序处理函数添加一些逻辑来判断传入的 `sortKey` 触发器是正常排序还是逆序排序。如果 `sortKey` 与 state 中的相同，则可能是逆序排序，但前提是排序的状态还没有反转：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -107,7 +107,7 @@ const List = ({ list, onRemoveItem }) => {
 
 > The reverse sort is now operational. For the object passed to the state updater function, we use what is called a **shorthand object initializer notation**:
 
-现在逆序排序可以工作了，对于传给 state 更新函数的对象，我们使用了所谓的 **shorhand 对象初始化符号**：
+现在逆序排序可以工作了，对于传给 state 更新函数的对象，我们使用了所谓的 **shorthand 对象初始化符号**：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
