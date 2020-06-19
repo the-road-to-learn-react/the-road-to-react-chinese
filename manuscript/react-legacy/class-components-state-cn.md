@@ -47,7 +47,7 @@ class App extends React.Component {
 
 > In a React class component, there are two dedicated APIs (`this.state` and `this.setState`) to manage a component's state. In a function component, React's useState and useReducer hooks handle this. Related items are packed into one state hook, while a class component must use a general state API. This was one of the major reasons to introduce React Hooks, and move away from class components.
 
-在 React 类组件中，有两个专门的 API（`this.state`和`this.setState`）来管理组件的 state。在函数组件中，React 的 useState 和 useReducer 钩子来处理。相关项被打包到一个状态 hook 中，而类组件必须使用通用状态 API。这也是引入 React Hooks，摆脱类组件的主要原因之一。
+在 React 类组件中，有两个专门的 API（`this.state`和`this.setState`）来管理组件的 state。在函数组件中，React 的 useState 和 useReducer hooks 来处理。相关项被打包到一个状态 hook 中，而类组件必须使用通用状态 API。这也是引入 React Hooks，摆脱类组件的主要原因之一。
 
 ### 练习：
 
