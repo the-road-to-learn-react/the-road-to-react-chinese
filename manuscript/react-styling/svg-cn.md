@@ -2,9 +2,9 @@
 
 要创建一个现代 React 应用程序，我们可能需要使用 SVG。例如我们可能不想给每个按钮元素都加上文字，而是希望用一个图标来显示，从而变得轻量级。在本节中，我们将在一个 React 组件中使用一个可扩展的矢量图形（SVG）作为图标。
 
-这一部分是基于我们前面介绍的 "React中的CSS "的基础上，让 SVG 图标有一个好的外观和感觉。使用不同的样式方法或者完全不使用样式都是可以接受的，尽管没有加上样式的 SVG 可能会显得不伦不类。
+这一部分是基于我们前面介绍的 "React 中的 CSS "的基础上，让 SVG 图标有一个好的外观和感觉。使用不同的样式方法或者完全不使用样式都是可以接受的，尽管没有加上样式的 SVG 可能会显得不伦不类。
 
-这个 SVG 的图标来自于[Flaticon's Freepick](https://www.flaticon.com/authors/freepik)。这个网站上的许多 SVG 都是免费的，但需要注明作者。你可以从[这里](https://www.flaticon.com/free-icon/check_109748)下载 SVG 图标，并将其作为 *src/check.svg* 放到你的项目中。下载 SVG 文件是推荐的方式，这里是 SVG 的定义：
+这个 SVG 的图标来自于 [Flaticon's Freepick](https://www.flaticon.com/authors/freepik)。这个网站上的许多 SVG 都是免费的，但需要注明作者。你可以从[这里](https://www.flaticon.com/free-icon/check_109748)下载 SVG 图标，并将其作为 *src/check.svg* 放到你的项目中。下载 SVG 文件是推荐的方式，这里是 SVG 的定义：
 
 {title="Code Playground",lang="html"}
 ~~~~~~~
@@ -23,7 +23,7 @@
 </svg>
 ~~~~~~~
 
-因为我们再次使用了 create-react-app，所以我们可以马上导入 SVG（类似于CSS）作为React组件。在 *src/App.js* 中，使用下面的语法导入 SVG：
+因为我们再次使用了 create-react-app，所以我们可以马上导入 SVG（类似于 CSS）作为 React 组件。在 *src/App.js* 中，使用下面的语法导入 SVG：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -36,7 +36,7 @@ import { ReactComponent as Check } from './check.svg';
 # leanpub-end-insert
 ~~~~~~~
 
-我们正在导入一个 SVG，SVG 可以有许多不同用途（如 logo、背景）。用一个 SVG 组件作为 `height` 和 `width`属性来代替一个按钮文本。
+我们正在导入一个 SVG，SVG 可以有许多不同用途（如 logo、背景）。用一个 SVG 组件作为 `height` 和 `width` 属性来代替一个按钮文本。
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -73,12 +73,12 @@ const Item = ({ item, onRemoveItem }) => (
 }
 ~~~~~~~
 
-creat-react-app 项目让使用 SVG 变得简单直接，不需要额外的配置。如果你用 Webpack 等构建工具从头开始创建一个 React 项目，那就不一样了，因为你必须自己去处理。总之，SVG可以让你的应用程序更加平易近人，所以在你觉得适合自己的时候就可以使用它们。
+creat-react-app 项目让使用 SVG 变得简单直接，不需要额外的配置。如果你用 Webpack 等构建工具从头开始创建一个 React 项目，那就不一样了，因为你必须自己去处理。总之，SVG 可以让你的应用程序更加平易近人，所以在你觉得适合的时候就可以使用它们。
 
 ### 练习：
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/CSS-in-React-SVG)。
   * 检查[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/CSS-in-React...hs/CSS-in-React-SVG?expand=1)。
 * 阅读更多关于[create-react-app 中的 SVGs](https://create-react-app.dev/docs/adding-images-fonts-and-files)。
-* 阅读更多关于[React中的 SVG 背景图案](https://www.robinwieruch.de/react-svg-patterns)。
-* 在你的应用程序中添加另一个SVG图标。
+* 阅读更多关于[React 中的 SVG 背景图案](https://www.robinwieruch.de/react-svg-patterns)。
+* 在你的应用程序中添加另一个 SVG 图标。
