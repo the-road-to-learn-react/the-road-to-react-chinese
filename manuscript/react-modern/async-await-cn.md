@@ -34,7 +34,7 @@ const App = () => {
 
 > To use async/await, our function requires the `async` keyword. Once you start using the `await` keyword, everything reads like synchronous code. Actions after the `await` keyword are not executed until promise resolves, meaning the code will wait.
 
-想使用 async / await，需要给函数加 `async` 关键字。一旦开始使用 `await` 关键字，代码读起来就像同步的一样了。`await` 关键字后面的动作会等到 promise 正常返回后才会执行，也就是说代码会等待：
+想使用 async / await，需要给函数加 `async` 关键字。一旦开始使用 `await` 关键字，代码读起来就像同步的了。`await` 关键字后面的动作会等到 promise 正常返回后才会执行，也就是说代码会等待：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
