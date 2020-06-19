@@ -11,14 +11,14 @@
 
 > Throughout this section we will compare a [modern React application](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/react-modern-final) to its [legacy version](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/react-legacy). We'll discover that most differences between modern and legacy React are due to class components versus function components.
 
-在本节中，我们将对一个[现代 React 应用](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/react-modern-final)和它的[遗留版本](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/react-legacy)进行比较。我们会发现，现代 React 和传统 React 之间的大部分差异都是由于类组件和函数组件造成的。
+在本节中，我们将对一个[现代 React 应用](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/react-modern-final)和它的[遗留d版本](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/react-legacy)进行比较。我们会发现，现代 React 和传统 React 之间的大部分差异都是由于类组件和函数组件造成的。
 
 > ## React Class Components
 ## React 类组件
 
 > React components have undergone many changes, from **createClass components** over **class components**, to **function components**. Going through a React application today, it's likely that we'll see class components next to the modern function components.
 
-React 组件经历类很多变化，从 **craeteClass components**到**class components**，再到**function components**。今天再翻开 React 应用看看，我们很可能会在现代到函数组件看到类组件。
+React 组件经历了很多变化，从 **createClass components** 到 **class components**，再到 **function components**。今天再翻开 React 应用看看，我们很可能会在现代到函数组件看到类组件。
 
 {title="Code Playground",lang="javascript"}
 ~~~~~~~
@@ -50,7 +50,7 @@ class InputWithLabel extends React.Component {
 
 > A typical class component is a JavaScript class with a mandatory **render method** that returns the JSX. The class extends from a `React.Component` to inherit ([class inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))) all React's component features (e.g. state management for state, lifecycle methods for side-effects). React props are accessed via the class instance (`this`).
 
-一个典型的类组件是一个带有强制**render 方法**的 JavaScript 类，该类返回 JSX。该类从`React.Component`中扩展出来的，继承（[类的继承](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)）所有的 React 的组件特性（状态的管理，副作用的生命周期方法）。React props 通过类实例（`this`）来访问。
+一个典型的类组件是一个带有强制 **render 方法**的 JavaScript 类，该类返回 JSX。该类从 `React.Component` 中扩展出来的，继承（[类的继承](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)）所有的 React 的组件特性（状态的管理，副作用的生命周期方法）。React props 通过类实例（`this`）来访问。
 
 > For a while class components were the popular choice for writing React applications. Eventually, function components were added, and both co-existed with their distinct purposes side by side:
 
