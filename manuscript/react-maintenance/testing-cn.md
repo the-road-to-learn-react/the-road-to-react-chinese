@@ -26,7 +26,7 @@
 
 > Often the lines between unit and integration tests are unclear. Testing the List component with its Item component could be considered an integration test, but it could also be a unit test for two tightly coupled components. In this section, we start with unit testing and move towards integration testing. Everything in between is a spectrum between both.
 
-通常来说单元测试和集成测试的边界是模糊的。测试包含 Item 组件的 List 组件可以被看做是一个集成测试，但是它也可以被看做是对于两个高耦合组件的单元测试。在这一小节中，我们从单元测试开始，逐渐向集成测试过渡。这两者之间的过渡如果光谱一样模糊没有边界。
+通常来说单元测试和集成测试的边界是模糊的。测试包含 Item 组件的 List 组件可以被看做是一个集成测试，但是它也可以被看做是对于两个高耦合组件的单元测试。在这一小节中，我们从单元测试开始，逐渐向集成测试过渡。这两者之间的过渡如光谱一样模糊没有边界。
 
 > Let's start with a pseudo test in your *src/App.test.js* file:
 
@@ -275,7 +275,7 @@ describe('Item', () => {
 
 > Jest lets us pass a test-specific function to the Item component as prop. These test specific functions are called **spy**, **stub**, or **mock**; each is used for different test scenarios. The `jest.fn()` returns us a *mock* for the actual function, which lets us capture when it's called. As a result, we can use Jest assertions like `toHaveBeenCalledTimes`, which lets us assert a number of times the function has been called; and `toHaveBeenCalledWith`, to verify arguments that are passed to it.
 
-Jest 允许我们将一个特殊的测试函数当做 Item 组件的 prop 传入。这些函数被称为 **spy** 、 **stub** 或 **mock**；它们被用做不同的测试场景。`jest.fn()` 将返回一个真实函数的 mock，这可以让我们捕捉到什么时候被调用。因此，我们可以使用 `toHaveBeenCalledTimes` 断言来断言函数被调用的次数；也可以用 `toHaveBeenCalledWith` 来验证传入函数的参数。
+Jest 允许我们将一个特殊的测试函数当做 Item 组件的 prop 传入。这些函数被称为 **spy** 、 **stub** 或 **mock**；它们被用做不同的测试场景。`jest.fn()` 将返回一个真实函数的 mock，这可以让我们捕捉到函数什么时候被调用。因此，我们可以使用 `toHaveBeenCalledTimes` 断言来断言函数被调用的次数；也可以用 `toHaveBeenCalledWith` 来验证传入函数的参数。
 
 > Item component's unit test is complete, because we tested input (`item`) and output (`onRemoveItem`). The two shouldn't be confused with input (arguments) and output (JSX) of the function component, which were also tested as. One last improvement makes the test suite for the Item component more concise by giving it a shared setup function:
 
@@ -363,7 +363,7 @@ describe('List', () => {
 
 > The test checks straightforward whether two Item components are rendered for the two items in the list. You could continue testing the List component by checking whether each callback handler (`onRemoveItem`) is called for each Item component, which would have a similar solution to the previous Item component's test. Is this test still a unit test or already an integration test?
 
-该测试直接检查了在 List 组件中是否以两个 item 属性渲染了两个 Item 组件。你可以使用上一个 Item 组件测试中类似的方式，接着测试 List 组件的每一个回调处理函数(`onRemoveItem`)是否在每一个 Item 组件中被调用。那么这个这样的测试还是一个单元测试吗？或者说这已经失意者集成测试了呢？
+该测试直接检查了在 List 组件中是否以两个 item 属性渲染了两个 Item 组件。你可以使用上一个 Item 组件测试中类似的方式，接着测试 List 组件的每一个回调处理函数(`onRemoveItem`)是否在每一个 Item 组件中被调用。那么这个这样的测试还是一个单元测试吗？或者说这已经属于集成测试了呢？
 
 > Keeping this question in the room, we will move on to the SearchForm with InputWithLabel component:
 
@@ -398,7 +398,7 @@ describe('SearchForm', () => {
 
 > In this test, we assert whether the InputWithLabel component receives the correct prop from the SearchForm component. Essentially the test stops before the InputWithLabel component, because it only tests the interface (props) of it. Arguably it's still a unit test, because the underlying implementation details of the InputWithLabel component could change without changing the interface. You can change the test to make it work through to the InputWithLabel component's input field, because all child components and its elements are rendered too:
 
-在这个测试中，我们断言了 InputWithLabel 组件是否从 SearchForm 组件中接收到了正确的 prop。本质上来说这个测试在 InputWithLabel 组件之前就结束了，因为它只测试了组件的接口(props)。可以说它仍然是一个单元测试，因为 InputWithLabel 组件的层实现细节可以在不改变接口的情况下改变。你可以通过改变测试来使其工作到InputWithLabel组件的输入字段，因为所有的子组件和它的元素也会被渲染。
+在这个测试中，我们断言了 InputWithLabel 组件是否从 SearchForm 组件中接收到了正确的 prop。本质上来说这个测试在 InputWithLabel 组件之前就结束了，因为它只测试了组件的接口(props)。可以说它仍然是一个单元测试，因为 InputWithLabel 组件的内部实现细节可以在不改变接口的情况下改变。你可以通过改变测试来获取到 InputWithLabel 组件内 input 组件的字段，因为所有的子组件和元素也会被渲染。
 
 **这段需要重点校对**
 
@@ -539,7 +539,7 @@ describe('App', () => {
 
 > In the actual App component, a third-party library (axios) is used to make a request to a remote API. This API returns data we can't foresee in the test, so we have to mock it instead. Jest provides mechanisms that mock entire libraries and their methods. In this case, we want  to mock the `get()` method of axios to return our desired data:
 
-在实际的 App 组件中，我们使用第三方库（axios）向一个远程 API 发出请求。这个API返回的数据是我们在测试中无法预知的，所以我们必须对其进行 mock。Jest 提供了 mock 整个库及其方法的机制。在本例中，我们要模拟 axios 的 `get()` 方法来返回我们想要的数据。
+在实际的 App 组件中，我们使用第三方库（axios）向一个远程 API 发出请求。这个 API 返回的数据是我们在测试中无法预知的，所以我们必须对其进行 mock。Jest 提供了 mock 整个库及其方法的机制。在本例中，我们要模拟 axios 的 `get()` 方法来返回我们想要的数据。
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -615,7 +615,7 @@ describe('App', () => {
 
 > Instead of rendering the App component, we mocked the response from the remote API by mocking the method that fetches the data. To stay on the *happy path*, we told the test to treat the component as an asynchronously updating component. You can apply a similar strategy to the *unhappy path*:
 
-我们并没有渲染 App 组件，而是通过 mock 获取数据的方法来模拟远程API的响应。为了专注于 happy path，我们告诉测试将组件视为异步更新组件。你可以将类似的策略应用到 unhappy path 上：
+我们并没有渲染 App 组件，而是通过 mock 获取数据的方法来模拟远程 API 的响应。为了专注于 happy path，我们告诉测试将组件视为异步更新组件。你可以将类似的策略应用到 unhappy path 上：
 
 {title="src/App.test.js",lang="javascript"}
 
@@ -655,7 +655,7 @@ describe('App', () => {
 
 > Jest also lets you take a **snapshot** of your rendered component, run it against future captures, and be notified of changes. Changes can then be accepted or denied depending on the desired outcome. This mechanism complements unit and integration tests well, since it only tests the differences of the rendered output without heavy maintenance costs. To see it in action, extend the Item component test suite with your first snapshot test:
 
-Jest 还可以让你对你的渲染组件进行**快照**，并与未来的抓取的快照结果进行对比运行，然后收到更改通知。然后根据所需的结果，可以接受或拒绝更改。这种机制是对单元和集成测试的很好的补充，因为它只测试渲染输出的差异，而不需要大量的维护成本。要查看它的实际操作，请用你的第一个快照测试来扩展 Item 组件的测试套件：
+Jest 还可以让你对你的渲染组件进行**快照**，将其与未来抓取的快照结果进行对比，并在发现变动时通知你。然后根据所需的结果，可以接受或拒绝更改。这种机制是对单元和集成测试的很好补充，因为它只测试渲染输出的差异，而不需要大量的维护成本。要查看它的实际操作，请用你的第一个快照测试来扩展 Item 组件的测试套件：
 
 {title="src/App.test.js",lang="javascript"}
 
