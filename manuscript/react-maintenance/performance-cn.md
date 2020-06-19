@@ -4,7 +4,7 @@
 
 > Once a React application grows, maintenance becomes a priority. To prepare for this eventuality, we'll cover performance optimization, type safety, testing, and project structure.  Each can strengthen your app to take on more functionality without losing quality.
 
-一旦 React 应用开始变得越来越庞大，维护将会变得重中之重。我们将介绍性能优化，类型安全，测试以及项目结构等方面来应对这种情况。每一个方面都能在不降低质量的情况下增强您的应用，以能承担更多的功能。
+一旦 React 应用开始变得越来越庞大，维护将会成为重中之重。我们将介绍性能优化，类型安全，测试以及项目结构等方面来应对这种情况。每一个方面都能在不降低质量的情况下增强您的应用，以能承担更多的功能。
 
 > Performance optimization prevents applications from slowing down by assuring efficient use of available resource.  Typed programming languages like TypeScript detect bugs earlier in the feedback loop.  Testing gives us more explicit feedback than typed programming, and provides a way to understand which actions can break the application. Lastly, project structure supports the organized management of assets into folders and files, which is especially useful in scenarios where team members work in different domains.
 
@@ -219,7 +219,7 @@ const List = React.memo(
 
 > However, the output stays the same when typing into the SearchForm's input field:
 
-然而，当像 SearchForm 中输入值的时候输出仍然没有改变：
+然而，当向 SearchForm 中输入值的时候输出仍然没有改变：
 
 {title="Visualization",lang="text"}
 ~~~~~~~
@@ -263,11 +263,11 @@ const App = () => {
 
 > While all props passed to a component stay the same, the component renders again if its parent component is forced to re-render. That's React's default behavior, which works most of the time because the re-rendering mechanism is fast enough. However, if re-rendering decreases the performance of a React application, `memo` helps prevent re-rendering.
 
-虽然传递给组件的所有的 props 都保持不变，但是如果它们的父组件强制重新渲染，那么它们也会再次渲染。这是 React 的默认行为，因为重新渲染的机制足够快，所以它在大多数情况下都是这么运作。但是，如果重新渲染降低了 React 应用的性能，那么 `memo` 将有助于防止重新渲染。
+虽然传递给组件的所有 props 都保持不变，但是如果它们的父组件强制重新渲染，那么它们也会再次渲染。这是 React 的默认行为，因为重新渲染的机制足够快，所以它在大多数情况下都是这么运作。但是，如果重新渲染降低了 React 应用的性能，那么 `memo` 将有助于防止重新渲染。
 
 > Sometimes `memo` alone doesn't help, though. Callback handlers are re-defined each time in the parent component and passed as *changed* props to the component, which causes another re-render. In that case, `useCallback` is used for making the callback handler only change when its dependencies change.
 
-有时单独使用 `memo` 并没有什么用，每次父组件中都会重新定义回调，并且将其作为 *变化了的* props 该组件，这会触发另一次重新渲染。在这种情况下，`useCallback` 可以使回调只有在依赖项发生变化时才进行改变。
+有时单独使用 `memo` 并没有什么用，每次父组件中都会重新定义回调，并且将其作为*变化了的* props 传给该组件，这会触发另一次重新渲染。在这种情况下，`useCallback` 可以使回调只有在依赖项发生变化时才进行改变。
 
 > ### Don't rerun expensive computations
 
@@ -342,7 +342,7 @@ const App = () => {
 
 > Now, after we went through these scenarios for `useMemo`, `useCallback`, and `memo`, remember that these shouldn't necessarily be used by default. Apply these performance optimization only if you run into a performance bottlenecks. Most of the time this shouldn't happen, because React's rendering mechanism is pretty efficient by default. Sometimes the check for utilities like `memo` can be more expensive than the re-rendering itself.
 
-现在，我们已经了解了使用 `useMemo`、`useCallback` 和 `memo` 的场景，请记住一般情况下不一定必须使用这些场景。只有在遇到性能瓶颈时才应用这些优化方式，大多数情况下并不需要优化，因为 React 的渲染机制非常高效。有时，像 `memo` 之类优化方式的开销比组件重新渲染的开销还要大。
+现在，我们已经了解了使用 `useMemo`、`useCallback` 和 `memo` 的场景，请记住一般情况下不一定必须使用这些工具。只有在遇到性能瓶颈时才应用这些优化方式，大多数情况下并不需要优化，因为 React 的渲染机制非常高效。有时，像 `memo` 之类优化方式的开销比组件重新渲染的开销还要大。
 
 > ### Exercises:
 
