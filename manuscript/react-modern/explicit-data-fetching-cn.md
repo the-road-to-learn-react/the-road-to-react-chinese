@@ -4,7 +4,7 @@
 
 > Re-fetching all data each time someone types in the input field isn't optimal. Since we're using a third-party API to fetch the data, its internals are out of our reach. Eventually, we will incur [rate limiting](https://en.wikipedia.org/wiki/Rate_limiting), which returns an error instead of data.
 
-每次在输入框中键入内容就重新获取数据不是最佳的选择。因为我们使用的是第三方 API 去获取数据，频繁的调用可能达到 [rate limiting](https://en.wikipedia.org/wiki/Rate_limiting)，这会返回错误。
+每次在输入框中键入内容就重新获取数据不是最佳的选择。因为我们使用的是第三方 API 去获取数据，频繁的调用可能引发 [限速](https://en.wikipedia.org/wiki/Rate_limiting)，接口将返回错误。
 
 > To solve this problem, change the implementation details from implicit to explicit data (re-)fetching. In other words, the application will refetch data only if someone clicks a confirmation button. First, add a button element for the confirmation to the JSX:
 
@@ -121,7 +121,7 @@ const App = () => {
 
 > Before the `searchTerm` was used for two cases: updating the input field's state and activating the side-effect for fetching data. Too many responsibilities one may would have said. Now it's only used for the former. A second state called `url` got introduced for triggering the side-effect for fetching data which only happens when a user clicks the confirmation button.
 
-之前的 `searchTerm` 有两个用途：更新（存储）输入框的值和触发获取数据，现仅用于更新（存储）输入框的值。现在当用户点击确认按钮时，`url` 状态会被更新并引起相应的副作用以获取新的数据。
+之前的 `searchTerm` 有两个用途：更新（存储）输入框的值和触发获取数据，现在它仅用于更新（存储）输入框的值。现在当用户点击确认按钮时，`url` 状态会被更新并引起相应的副作用以获取新的数据。
 
 > ### 练习：
 
