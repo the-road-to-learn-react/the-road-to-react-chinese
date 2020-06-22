@@ -4,7 +4,7 @@
 
 > The Road to React teaches the fundamentals of React. You will build a real-world application in plain React without complicated tooling. Everything from project setup to deployment on a server will be explained for you. The book comes with additional referenced reading material and exercises with each chapter. After reading the book, you will be able to build your own applications in React. The material is kept up to date by myself and the community.
 
-《通向 React 之路》旨在讲授 React 基础知识。你将会用 React 搭建一个真实的应用程序，无需其他复杂的工具。从项目初始化到服务器部署，我会为你详细讲解其中每一步，并在每一章都附有参考资料和练习。读完此书后你将能够搭建自己的 React 应用。我和社区会保证这些材料始终是最新的。
+《通向 React 之路》旨在讲授 React 基础知识。你将会用 React 搭建一个真实的应用程序，无需其他复杂的工具。从项目初始化到服务器部署，我会为你详细讲解其中的每一步，并在每一章都附有参考资料和练习。读完此书后你将能够搭建自己的 React 应用。我和社区会保证这些材料始终是最新的。
 
 >  In the Road to React, I offer a foundation before you dive into the broader React ecosystem. The concepts will have less tooling and less external state management, but a lot of information about React. It explains general concepts, patterns, and best practices in a real world React application.
 
@@ -24,15 +24,15 @@
 
 > For a few years, I worked closely with an exceptional team of engineers at a company called Small Improvements, developing large scale applications. The company offered a SaaS product that enables customers to give feedback to businesses. This application was developed using JavaScript on its frontend, and Java as its backend. The first iteration of Small Improvements' frontend was written in Java with the Wicket Framework and jQuery. When the first generation of SPAs became popular, the company migrated to Angular 1.x for its frontend application. After using Angular for over two years, it became clear that Angular wasn't the best solution to work with state intense applications, so they made the jump to React and Redux. This enabled it to operate on a large scale successfully.
 
-有几年，我和一群出类拔萃的工程师一起在一家叫做 Small Improvements 的公司工作，开发大型应用程序。公司经营的是一款 SaaS 产品，能够让客户提供反馈给商家。产品的前端是用的是 JavaScript，后端是 Java。在最初的版本使用的是 Java 的 Wicket 框架和 jQuery。没过多久，第一代 SPA（单页面应用）开始流行起来，公司决定把前端迁移到 Angular 1.x 。然而在和 Angular 纠缠了两年多以后，我们渐渐发现它并不是管理复杂多变的应用状态的最佳方案，转而投入了 React 和 Redux 的怀抱，这使得产品大获成功。
+有几年，我和一群出类拔萃的工程师一起在一家叫做 Small Improvements 的公司工作，开发大型应用程序。公司经营的是一款 SaaS 产品，能够让客户提供反馈给商家。产品的前端是用的 JavaScript，后端是 Java。在最初的版本使用的是 Java 的 Wicket 框架和 jQuery。没过多久，第一代 SPA（单页面应用）开始流行起来，公司决定把前端迁移到 Angular 1.x 。然而在和 Angular 纠缠了两年多以后，我们渐渐发现它并不是管理复杂多变的应用状态的最佳方案，转而投入了 React 和 Redux 的怀抱，这使得产品大获成功。
 
 > During my time in the company, I regularly wrote articles about web development on my website. I received great feedback from people learning from my articles which allowed me to improve my writing and teaching style. Article after article, I grew my ability to teach others. I felt that my first articles were packed with too much information, quite overwhelming for students, but I improved by focusing on one subject at a time.
 
-我在公司时，会定期地在我的网站上写一些关于 Web 开发的文章。感谢那时的读者给了我很多很棒的反馈，让我的写作和教学水平得到了提升。就这样日积月累，我渐渐习得了教练技巧。我发现我早期的文章里倾向于包含过量的信息，让学生不堪重负，我慢慢地学会了每次只关注一个主题。
+我在公司时，会定期地在我的网站上写一些关于 Web 开发的文章。感谢那时的读者给了我很多很棒的反馈，让我的写作和教学水平得到了提升。就这样日积月累，我渐渐习得了教练技巧。我发现我早期的文章倾向于包含过量的信息，让学生不堪重负，我慢慢地学会了每次只关注一个主题。
 
 > Currently, I am a self-employed software engineer and educator. I find it a fulfilling pastime to see students thrive by giving them clear objectives and short feedback loops. You can find more information about me and ways to support and work with me on my [website](https://www.robinwieruch.de/about).
 
-现在我是作为自由职业者在继续软件开发工程师和教育者的工作。通过设定明确的目标和短期反馈环，我能看到学生们可以得到快速成长，我的成就感也来源于此。我的[网站]((https://www.robinwieruch.de/about))上有更多关于我个人的信息，以及如何支持或和我一起工作的方式。
+如今，我作为自由职业者在继续软件开发工程师和教育者的工作。通过设定明确的目标和短期反馈环，我能看到学生们可以得到快速成长，我的成就感也来源于此。我的[网站]((https://www.robinwieruch.de/about))上有更多关于我个人的信息，以及如何支持或和我一起工作的方式。
 
 ## FAQ
 
@@ -76,7 +76,7 @@
 
 > If you have feedback, shoot me an email and I will take your suggestions into consideration. Don't expect any replies for bug tracking or troubleshoots though, because that's what's the Slack Community for.
 
-**我可以内容改进做贡献吗？**
+**我可以为内容改进做贡献吗？**
 
 如果你有任何反馈，请不要犹豫发送邮件给我，我会认真考虑你的建议。但如果是 bug 追踪或者疑难解答类的邮件可能就不要期望有回复了，Slack 社区才是用来做这个的。
 
@@ -102,7 +102,7 @@
 
 * > JavaScript beginners with knowledge in fundamental JS, CSS, and HTML: If you just started out with web development, and have a basic grasp about JS, CSS, and HTML, this book should give you everything that's needed to learn React. However, if you feel there is a gap in your JavaScript knowledge, don't hesitate to read up on this topic before continuing with the book. You will have lots of references to this fundamental knowledge in the book though.
 
-* JavaScript 初学者，了解基本的 JS、CSS 和 HTML 知识。如果你刚开始接触 Web 开发，对 JS、CSS 和 HTML 有基本概念，那么本书可以提供给所有学习 React 需要的内容。如果你觉得自己的 JavaScript 水平还不够，那可以在继续本书之前了解更多关于  JavaScript 的知识。当然，你也会在本书的参考中获得更多基础知识的相关资料。
+* JavaScript 初学者，了解基本的 JS、CSS 和 HTML 知识。如果你刚开始接触 Web 开发，对 JS、CSS 和 HTML 有基本概念，那么本书可以提供给所有学习 React 需要的内容。如果你觉得自己的 JavaScript 水平还不够，那可以在继续本书之前了解更多关于 JavaScript 的知识。当然，你也会在本书的参考中获得更多基础知识的相关资料。
 
 * > JavaScript veterans coming from jQuery: If you have used JavaScript with jQuery, MooTools, and Dojo extensively back in the days, the new JavaScript era may seem overwhelming for someone getting back on track with it. However, most of the fundamental knowledge didn't change, it's still JavaScript and HTML under the hood, so this book should give you the right start into React.
 
