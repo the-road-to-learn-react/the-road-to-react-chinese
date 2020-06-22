@@ -12,7 +12,7 @@
 
 > * Don't use a new state for this feature. Instead, reuse the `url` state and `setUrl` state updater function to fetch stories from the API. Adapt them to multiple `urls` as state, and to set multiple `urls` with `setUrls`. The last URL from `urls` can be used to fetch the data, and the last five URLs from `urls` can be used to display the buttons.
 
-* 不要为这个功能使用新的 state。相反，重用 `url` state 和 `setUrl` state 更新函数来重新从 API 获取内容。将它们适配为 `urls` 状态，并且使用 `setUrls` 设置 `urls`。`urls` 中的最后一个 URL 可以用来获取数据，并且`urls` 中最后五个 URL 可以用来显示按钮。
+* 不要为这个功能使用新的 state。相反，重用 `url` state 和 `setUrl` state 更新函数来重新从 API 获取内容。将它们适配为 `urls` 状态，并且使用 `setUrls` 设置 `urls`。`urls` 中的最后一个 URL 可以用来获取数据，并且 `urls` 中最后五个 URL 可以用来显示按钮。
 
 ![](images/last-searches.png)
 
@@ -95,7 +95,7 @@ const App = () => {
 
 > With each search, another URL is stored in our state of `urls`. Next, render a button for each of the last five URLs. We'll include a new universal handler for these buttons, and each passes a specific `url` with a more specific inline handler:
 
-每一次搜索时，新的 URL 都会储存在我们的 `urls` state 中。接下来，渲染为最后五个 URL 中每个 URL 渲染一个按钮，我们将为这些按钮添加一个新的通用的处理方法，并且每次给一个特定的内联函数传递一个特定的 `url`：
+每一次搜索时，新的 URL 都会储存在我们的 `urls` state 中。接下来，为最后五个 URL 中每个 URL 渲染一个按钮，我们将为这些按钮添加一个新的通用的处理函数，并且每次给一个特定的内联函数传递一个特定的 `url`：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -224,7 +224,7 @@ const App = () => {
 
 > If you compare this new handler's implementation logic to the `handleSearchSubmit`, you may see some common functionality. Extract this common functionality to a new handler and a new extracted utility function:
 
-如果你将这个新的处理函数的实现逻辑和 `handleSearchSubmit` 对比一下，你可能会发现一些共同的功能。将这些共同的功能提取到一个新的处理函数和新的提取的实用工具函数中：
+如果你将这个新的处理函数的实现逻辑和 `handleSearchSubmit` 对比一下，你可能会发现一些共同的功能。将这些共同的功能提取到一个新的处理函数和新提取的实用工具函数中：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -264,7 +264,7 @@ const App = () => {
 
 > The new utility function can be used somewhere else in the App component. If you extract functionality that can be used by two parties, always check to see if it can be used by a third party.
 
-新的实用工具函数可以在 App 组件的其他任何地方使用。如果你提取的功能可以被双方使用，那么一定要检查一下它是否可以被第三方使用。
+新的实用工具函数可以在 App 组件的其他任何地方使用。如果你提取的功能可以被两处使用，那么一定要检查一下它是否可以被第三方使用。
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -282,7 +282,7 @@ const App = () => {
 
 > The functionality should work, but it complains or breaks if the same search term is used more than once, because `searchTerm` is used for each button element as `key` attribute. Make the key more specific by concatenating it with the `index` of the mapped array.
 
-该功能应该可以使用了，但如果同一个搜索词被多次使用，它就会出问题了，因为 `searchTerm` 被作为 `key` 属性用于每个按钮元素。我们可以通过将 `key` 与映射数组的 `index` 串联起来，使得 `key` 更加具体。
+该功能应该可以工作了，但如果同一个搜索词被多次使用，它就会出问题了，因为 `searchTerm` 被作为 `key` 属性用于每个按钮元素。我们可以通过将 `key` 与映射数组的 `index` 串联起来，使得 `key` 更加具体。
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -443,7 +443,7 @@ const LastSearches = ({ lastSearches, onLastSearch }) => (
 
 > This feature wasn't an easy one. Lots of fundamental React but also JavaScript knowledge was needed to accomplish it. If you had no problems implementing it yourself or to follow the instructions, you are very well set. If you had one or the other issue, don't worry too much about it. Maybe you even figured out another way to solve this task and it may have turned out simpler than the one I showed here.
 
-这个功能并不容易。需要很多 React 的基础知识，同时也需要大量的 JavaScript 知识来完成它。如果你自己实现它没有遇到任何问题，或者按照说明去做，那么你就已经做的很好了。如果你遇到了这样或那样的问题，也不用太过担心，也许你可以想出另一种解决方法，结果甚至可能比我展示的更加简单。
+这个功能并不容易。需要很多 React 的基础知识，同时也需要大量的 JavaScript 知识来完成它。如果你在自己实现它或者按照说明去做时没有遇到任何问题，那么你就已经做的很好了。如果你遇到了这样或那样的问题，也不用太过担心，也许你可以想出另一种解决方法，结果甚至可能比我展示的更加简单。
 
 ### 练习：
 
