@@ -8,9 +8,10 @@
 
 > After installing Node and npm, use the command line to type the following command in a dedicated folder for your project. We'll refer to this project as *hacker-stories*, but you may choose any name you like:
 
-安装了 Node 和 npm 之后，使用命令行在项目的专用文件夹中键入以下命令。我们将使用 *hacker-stories* 作为项目名， 但你可以选择任何你喜欢的名称：
+安装了 Node 和 npm 之后，使用命令行在项目的专用文件夹中键入以下命令。我们将使用 *hacker-stories* 作为项目名，但你可以选择任何你喜欢的名称：
 
 {title="Command Line",lang="text"}
+
 ~~~~~~~
 npx create-react-app hacker-stories
 ~~~~~~~
@@ -20,15 +21,17 @@ npx create-react-app hacker-stories
 初始化完成后，进入生成的项目文件夹：
 
 {title="Command Line",lang="text"}
+
 ~~~~~~~
 cd hacker-stories
 ~~~~~~~
 
 > Now we can open the application in an editor or IDE. For Visual Studio Code, you can simply type `code .` on the command line. The following folder structure, or a variation of it depending on the *create-react-app* version, should be presented:
 
-现在我们可以在编辑器或IDE中打开我们的应用程序。对于使用 Visual Studio Code，你只需要在命令行输入 `code .` 即可。最后会展示以下的目录结构，或者取决于不同的 *create-react-app* 版本会有一些变化:
+现在我们可以在编辑器或IDE中打开我们的应用程序。对于 Visual Studio Code，你只需要在命令行输入 `code .` 即可。最后会展示以下的目录结构，或者会有一些变化，取决于不同的 *create-react-app* 版本：
 
 {title="Project Structure",lang="text"}
+
 ~~~~~~~
 hacker-stories/
 --node_modules/
@@ -60,7 +63,7 @@ hacker-stories/
 
 > * **package.json:** This file shows you a list of node package dependencies and other project configurations.
 
-* **package.json：** 此文件向您展示了依赖的 node 包的列表和项目的其他配置信息。
+* **package.json：** 此文件向您展示了依赖的 node 包列表和项目的其他配置信息。
 
 > * **package-lock.json:** This file indicates npm how to break down all node package versions. We'll not touch this file.
 
@@ -68,15 +71,15 @@ hacker-stories/
 
 > * **.gitignore:** This file displays all files and folders that shouldn't be added to your git repository when using git, as such files and folders should be located only in your local project. The *node_modules/* folder is one example. It is enough to share the *package.json* file with others, so they can install dependencies on their end with `npm install` without your entire dependency folder.
 
-* **.gitignore：** 此文件描述了使用 Git 时不应该被添加到你的 Git 代码库的所有文件和文件夹，因为这些文件和文件夹仅位于本地的项目中。*node_modules/* 目录就是一个例子。与其他人共享 *package.json* 文件就已经足够了，其他人最终可以在没有依赖文件夹的时候通过 `npm install` 来重新安装这些依赖。
+* **.gitignore：** 此文件描述了使用 Git 时不应该被添加到你的 Git 代码库的所有文件和文件夹，因为这些文件和文件夹仅位于本地的项目中。*node_modules/* 目录就是一个例子。与其他人共享 *package.json* 文件就已经足够了，其他人可以在没有依赖文件夹的时候通过 `npm install` 来重新安装这些依赖。
 
 > * **public/：** This folder holds development files, such as *public/index.html*. The index file is displayed on *localhost:3000* when the app is in development or on a domain that is hosted elsewhere. The default setup handles relating this *index.html* with all the JavaScript from *src/*.
 
-* **public/:** 这个文件夹包含了一些开发时的文件，比如 *public/index.html*。在开发时这个索引文件将展示在 *localhost:3000* 或者其他托管的域名下。默认的设置会自动处理 *index.html* 与其他 *src/* 中的 JavaScript 文件的关联关系。
+* **public/:** 这个文件夹包含了一些开发时的文件，比如 *public/index.html*。在开发时这个索引文件将展示在 *localhost:3000* 或者其他托管的域名下。默认的设置会自动处理 *index.html* 与 *src/* 中其他 JavaScript 文件的关联关系。
 
 > In the beginning, everything you need is located in the *src/* folder. The main focus lies on the *src/App.js* file which is used to implement React components. It will be used to implement your application, but later you might want to split up your components into multiple files, where each file maintains one or more components on its own.
 
-首先，你需要的所有文件都位于 *src/* 文件夹下。我们主要关注用于实现 React 组件的 *src/App.js* 文件。它将会用来实现您的应用，但稍后您可能需要将组件拆分到多个文件中，其中每个文件中会维护一个或多个组件。
+首先，你需要的所有文件都位于 *src/* 文件夹下。我们主要关注用于实现 React 组件的 *src/App.js* 文件。它将会用来实现您的应用，但稍后您可能需要将组件拆分到多个文件中，每个文件中会维护一个或多个组件。
 
 > Additionally, you will find a *src/App.test.js* file for your tests, and a *src/index.js* as an entry point to the React world. You will get to know both files intimately in later sections. There is also a *src/index.css* and a *src/App.css* file to style your general application and components, which comes with the default style when you open them. You will modify them later as well.
 
@@ -87,6 +90,7 @@ hacker-stories/
 在了解了 React 项目的文件夹和文件结构之后，让我们来看一下一些可用的命令来帮助我们开始。项目的所有特定的命令都能在 *package.json* 中的 *scripts* 属性下找到。它们看起来大概是这样：
 
 {title="package.json",lang="javascript"}
+
 ~~~~~~~
 {
   ...
@@ -103,9 +107,10 @@ hacker-stories/
 
 > These scripts are executed with the `npm run <script>` command in an IDE-integrated terminal or command line tool. The `run` can be omitted for the `start` and `test` scripts. The commands are as follows:
 
-这些命令脚本是在 IDE 集成的终端，或者命令行中通过 `npm run <script>` 命令来执行的。其中 `run` 可以在执行 `start` 和 `test` 命令脚本时省略。如下:
+这些命令脚本可以在 IDE 集成的终端，或者命令行中通过 `npm run <script>` 命令来执行。其中 `run` 可以在执行 `start` 和 `test` 命令脚本时省略。如下:
 
 {title="Command Line",lang="text"}
+
 ~~~~~~~
 # 在 http://localhost:3000 运行应用
 npm start
