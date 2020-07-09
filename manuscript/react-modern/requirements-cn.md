@@ -20,11 +20,11 @@
 
 > Optionally, I recommend managing projects in GitHub while we conduct the exercises in this book, and I've provided a [short guide](https://www.robinwieruch.de/git-essential-commands/) on how to use these tools. Github has excellent version control, so you can see what changes were made if you make a mistake or just want a more direct way to follow along. It's also a great way to share your code later with other people.
 
-可选地，我推荐使用 GitHub 来管理本书中的练习项目，并且我提供了有关如何使用这些工具的[简短指南](https://www.robinwieruch.de/git-essential-commands/)。 Github 极为出色的版本控制，让你在犯了错误或者只是想采用一种更直接的方式来执行操作时，可以看到你所做的更改。 这也是以后与他人共享代码的好方法。
+可选地，我推荐使用 GitHub 来管理本书中的练习项目，并且我提供了有关如何使用这些工具的[简短指南](https://www.robinwieruch.de/git-essential-commands/)。Github 极为出色的版本控制，让你在犯了错误或者只是想采用一种更直接的方式来执行操作时，可以看到你所做的更改。这也是以后与他人共享代码的好方法。
 
 > If you don't want to set up the editor/terminal combination or IDE on your local machine, [CodeSandbox](https://codesandbox.io/), an online editor, is also a viable alternative. While CodeSandbox is a great tool for sharing code online, a local machine setup is a better tool for learning the different ways to create a web application. Also, if you want to develop applications professionally, a local setup will be required.
 
-如果你不想在本地计算机上设置编辑器/终端组合或 IDE，那么在线编辑器 [CodeSandbox](https://codesandbox.io/) 也是可行的选择。 虽然 CodeSandbox 是在线共享代码的出色工具，但本机设置是学习创建 Web 应用程序不同方法的更好工具。 另外，如果你想专业地开发应用程序，则本地设置是必需的。
+如果你不想在本地计算机上设置编辑器/终端组合或 IDE，那么在线编辑器 [CodeSandbox](https://codesandbox.io/) 也是可行的选择。虽然 CodeSandbox 是在线共享代码的出色工具，但本机设置是学习用不同方法创建 Web 应用的更好工具。另外，如果你想专业地开发应用程序，则本地设置是必需的。
 
 > ### Node and NPM
 
@@ -49,4 +49,4 @@ npm --version
 
 > If you have already installed Node and npm, make sure that your installation is the most recent version. If you're new to npm or need a refresher, this [npm crash course](https://www.robinwieruch.de/npm-crash-course) I created will get you up to speed.
 
-如果你已经安装了 Node 和 npm，请确保你安装的是最新版本。 如果你不熟悉 npm 或需要复习，我创建的 [npm 速成教程](https://www.robinwieruch.de/npm-crash-course)将带你快速入门。
+如果你已经安装了 Node 和 npm，请确保你安装的是最新版本。如果你不熟悉 npm 或需要复习，我创建的 [npm 速成教程](https://www.robinwieruch.de/npm-crash-course)将带你快速入门。
