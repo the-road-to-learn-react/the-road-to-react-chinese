@@ -33,7 +33,7 @@ const App = () => {
 
 > Instead of using the `label` prop from before, we inserted the text "Search:" between the component's element's tags. In the InputWithLabel component, you have access to this information via **React's children** prop. Instead of using the`label` prop, use the children`prop to render everything that has been passed down from above where you want it:
 
-不像之前使用 `label` prop 那样，而是把 “Search” 字样放在了组件元素标签之间。在组件 InputWithLabel 里，可以通过 **React 的 children** prop 来获取这个信息。不使用 `label` prop，而是用 children prop 在需要的地方渲染所有从上层传下来的东西：
+不像之前使用 `label` prop 那样，而是把 “Search” 字样放在了组件元素标签之间。在组件 InputWithLabel 里，可以通过 **React 的 children** prop 来获取这个信息。不使用 `label` prop，而是用 `children` prop 在需要的地方渲染所有从上层传下来的东西：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -63,7 +63,7 @@ const InputWithLabel = ({
 
 > Now the React component's elements behave similar to native HTML. Everything that's passed between a component's elements can be accessed as children`in the component and be rendered somewhere. Sometimes when using a React component, you want to have more freedom from the outside what to render in the inside of a component:
 
-现在 React 组件元素表现的和原生 HTML 很类似了。所有在组件元素之间的部分，在组件中都可以通过 `children` 获取到，然后渲染出来。有时当使用一个 React 组件时，你希望在外部有更多的自由去决定组件内部应该渲染什么。
+现在 React 组件元素表现的和原生 HTML 很类似了。所有在组件元素之间的部分，在组件中都可以通过 `children` 获取到，然后渲染出来。有时当使用一个 React 组件时，你希望在外部有更多自由去决定组件内部应该渲染什么：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
