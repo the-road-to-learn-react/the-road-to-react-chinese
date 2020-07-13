@@ -3,6 +3,7 @@
 > Recall that I mentioned the returned output of the App component resembles HTML. This output is called JSX, which mixes HTML and JavaScript. Let's see how this works for displaying the variable:
 
 回想一下，我提到 App 组件返回的类似 HTML 的输出。此输出称为 JSX，它将 HTML 和 JavaScript 混合在一起。让我们看看它如何展示变量：
+
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
 import React from 'react';
@@ -54,7 +55,7 @@ export default App;
 
 > We specified three HTML attributes here: `htmlFor`, `id`, and `type`. Where `id` and `type` should be familiar from native HTML, `htmlFor` might be new. The `htmlFor` reflects the `for` attribute in HTML. JSX replaces a handful of internal HTML attributes, but you can find all the [supported HTML attributes](https://reactjs.org/docs/dom-elements.html#all-supported-html-attributes) in React's documentation, which follow the camelCase naming convention. Expect to come across more JSX-specific attributes like `className` and `onClick` instead of `class` and `onclick`, as you learn more about React.
 
-我们在此处指定了三个 HTML 属性：`htmlFor`，`id` 和 `type`。这里的 `id` 和 `type` 在原生 HTML 中很熟悉，`htmlFor` 可能是新的属性。`htmlFor` 在 HTML 中反映了 `for` 属性。 JSX 替换了一些 HTML 内部属性，但是你可以在 React 的文档中找到所有[支持的 HTML 属性](https://reactjs.org/docs/dom-elements.html#all-supported-html-attributes)，JSX 遵循驼峰式命名约定。 随着对 React 的更多了解，将会遇到更多的 JSX 特定属性，例如 `className` 和 `onClick，而不是` `class` 和 `onclick。`
+我们在此处指定了三个 HTML 属性：`htmlFor`，`id` 和 `type`。这里的 `id` 和 `type` 在原生 HTML 中很熟悉，`htmlFor` 可能是新的属性。`htmlFor` 在 HTML 中反映了 `for` 属性。 JSX 替换了一些 HTML 内部属性，但是你可以在 React 文档中找到所有[支持的 HTML 属性](https://reactjs.org/docs/dom-elements.html#all-supported-html-attributes)，属性遵循驼峰式命名约定。 随着对 React 的更多了解，将会遇到更多的 JSX 特定属性，例如 `className` 和 `onClick`，而不是 `class` 和 `onclick`。
 
 > We will revisit the HTML input field for implementation details later; for now, let's return to JavaScript in JSX. We have defined a string primitive to be displayed in the App component, and the same can be done with a JavaScript object:
 
