@@ -83,7 +83,7 @@ function App() {
 
 > Larger React applications have **component hierarchies** (also called **component trees**). There is usually one uppermost **entry point component** (e.g. App) that spans a tree of components below it. The App is the **parent component** of the List, so the List is a **child component** of the App. In a component tree, the App is the **root component**, and the components that don't render any other components are called **leaf components** (e.g. List). The App can have multiple children, as can the List. If the App has another child component, the additional child component is called a **sibling component** of the List.
 
-大一点的 React 应用具备**组件层次结构**(也称为**组件树**)。一般来说最顶层的**入口组件**(比如：APP)会在它里面嵌套组件树。App 组件是 List 组件的**父组件**，相应的，List 组件也是 App 组件的**子组件**。在组件树中，App 是**根组件**，这个组件不会渲染其他**叶子组件**(比如： List)。App 可以有多个子组件，List 组件也是。如果 App 组件有其他子组件，那这个子组件称为 List 组件的**兄弟组件**。
+大一点的 React 应用具备**组件层次结构**（也称为**组件树**）。一般来说最顶层的**入口组件**（比如：APP）会在它里面嵌套组件树。App 组件是 List 组件的**父组件**，相应的，List 组件也是 App 组件的**子组件**。在组件树中，App 是**根组件**，这个组件不会渲染其他**叶子组件**（比如： List）。App 可以有多个子组件，List 组件也是。如果 App 组件有其他子组件，那这个子组件称为 List 组件的**兄弟组件**。
 
 
 > ### Exercises:
@@ -96,7 +96,7 @@ function App() {
 > * Ask yourself what problems could arise if we keep treating the `list` variable as global variable. We will cover how to handle these problems in the upcoming sections.
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Meet-another-React-Component)。
-  * 确认[上一节之后的变更](ttps://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lists-in-React...hs/Meet-another-React-Component?expand=1)。
+* 确认[上一节之后的变更](ttps://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lists-in-React...hs/Meet-another-React-Component?expand=1)。
 * 在纸上绘制一下 App 组件和 List 组件树。用其他可能的组件（比如：在 App 组件中提取 input 和 label 的 Search 组件）来扩展这个组件树。尝试找出其他组件哪些可以作为独立的组件被提取。
 * 如果在 App 组件中使用 Search 组件，那对于 List 组件来说，Search 组件是它的兄弟组件还是父组件或子组件？
 * 思考一下，如果我们使用全局变量来处理`list`会出现什么问题？我们即将在接下来的章节中介绍如何处理这个问题。
