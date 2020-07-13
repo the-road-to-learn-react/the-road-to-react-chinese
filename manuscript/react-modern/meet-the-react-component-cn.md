@@ -59,7 +59,7 @@ export default App;
 
 > First, this React component, called App component, is just a JavaScript function. It's commonly called **function component**, because there are other variations of React components  (see **component types** later). Second, the App component doesn't receive any parameters in its function signature yet (see **props** later). And third, the App component returns code that resembles HTML which is called JSX (see **JSX** later).
 
-首先，这个 App 组件是一个 JavaScript 函数。一般称它为 **函数组件 **，因为还有其他形式的 React 组件（稍后介绍 **组件类型 **）。其次，截止目前 App 函数组件不接收任何参数（稍后介绍  **props **）。最后，App 组件返回的像 HTML 的代码称之为 JSX（稍后介绍 **JSX **）。
+首先，这个 App 组件是一个 JavaScript 函数。一般称它为 **函数组件**，因为还有其他形式的 React 组件（稍后介绍 **组件类型**）。其次，截止目前 App 函数组件不接收任何参数（稍后介绍  **props**）。最后，App 组件返回的像 HTML 的代码称之为 JSX（稍后介绍 **JSX**）。
 
 > The function component possess implementation details like any other JavaScript function. You will see this in practice in action throughout your React journey:
 
