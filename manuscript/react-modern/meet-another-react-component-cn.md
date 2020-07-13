@@ -96,7 +96,7 @@ function App() {
 > * Ask yourself what problems could arise if we keep treating the `list` variable as global variable. We will cover how to handle these problems in the upcoming sections.
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Meet-another-React-Component)。
-* 确认[上一节之后的变更](ttps://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lists-in-React...hs/Meet-another-React-Component?expand=1)。
+    * 确认[上一节之后的变更](ttps://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lists-in-React...hs/Meet-another-React-Component?expand=1)。
 * 在纸上绘制一下 App 组件和 List 组件树。用其他可能的组件（比如：在 App 组件中提取 input 和 label 的 Search 组件）来扩展这个组件树。尝试找出其他组件哪些可以作为独立的组件被提取。
 * 如果在 App 组件中使用 Search 组件，那对于 List 组件来说，Search 组件是它的兄弟组件还是父组件或子组件？
 * 思考一下，如果我们使用全局变量来处理`list`会出现什么问题？我们即将在接下来的章节中介绍如何处理这个问题。
