@@ -11,7 +11,6 @@
 *src/App.js* 里所有的组件都是函数组件。JavaScript 有很多种声明函数的方式。到目前为止，我们都是用 function 来声明，但箭头函数看起来会更简洁一些：
 
 {title="Code Playground",lang="javascript"}
-
 ~~~~~~~
 // function declaration
 function () { ... }
@@ -25,7 +24,6 @@ const () => { ... }
 在声明箭头函数时，如果只有一个参数，可以把括号去掉。但有多个参数的时候，括号是必须的：
 
 {title="Code Playground",lang="javascript"}
-
 ~~~~~~~
 // allowed
 const item => { ... }
@@ -99,7 +97,7 @@ const List = () => {
 
 > If an arrow function doesn't do *anything* in between, but only returns *something*, -- in other words, if an arrow function doesn't perform any task, but only returns information --, you can remove the **block body** (curly braces) of the function. In a **concise body**, an **implicit return statement** is attached, so you can remove the return statement:
 
-如果一个箭头函数什么也没做，只是返回了些**什么结果**，——换句话说，如果一个箭头函数没有执行任何任务，只返回信息——，你还可以去掉**函数体**（花括号）。在**简式函数体**中，会附一个**隐式的返回声明**，所以 return 也是可以去掉的：
+如果一个箭头函数*什么也没做*，只是返回了*某些结果*，—— 换句话说，如果一个箭头函数没有执行任何任务，只返回信息——，你还可以去掉**函数体**（花括号）。在**简式函数体**中，会附一个**隐式的返回声明**，所以 return 也是可以去掉的：
 
 {title="Code Playground",lang="javascript"}
 ~~~~~~~
@@ -177,6 +175,6 @@ const App = () => {
 * Familiarize yourself with arrow functions with block body and return, and concise body without return.
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Component-Definition)。
-	* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Meet-another-React-Component...hs/React-Component-Definition?expand=1)。
+  * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Meet-another-React-Component...hs/React-Component-Definition?expand=1)。
 * 阅读更多关于 [JavaScript 箭头函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)的文章。
 * 熟练掌握有函数体和返回的箭头函数、以及没有返回语句的简洁写法。
