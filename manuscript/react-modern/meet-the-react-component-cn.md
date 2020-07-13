@@ -7,7 +7,6 @@
 我们的第一个 React 组件在 *src/App.js* 文件中，它和下面的这个例子很相似。内容可能稍有不同，因为 create-react-app 有时候会更新默认的组件结构。
 
 {title="src/App.js",lang="javascript"}
-
 ~~~~~~~
 import React from 'react';
 import logo from './logo.svg';
@@ -42,7 +41,6 @@ export default App;
 除非有另外的说明，否则该文件将会是贯穿这个教程的核心。我们先将组件简化为更轻便的版本，这样就可以在入门时不用关注那么多 create-react-app 生成的模板代码了。
 
 {title="src/App.js",lang="javascript"}
-
 ~~~~~~~
 # leanpub-start-insert
 import React from 'react';
@@ -68,7 +66,6 @@ export default App;
 这个函数组件的实现细节和其他任何 JavaScript 函数一样。在整个 React 旅程中，你会在实践中体会到这一点。
 
 {title="src/App.js",lang="javascript"}
-
 ~~~~~~~
 import React from 'react';
 
@@ -92,7 +89,6 @@ export default App;
 跟所有的 JavaScript 函数一样，在函数体内定义的变量会在每次运行函数的时候被重新定义。
 
 {title="src/App.js",lang="javascript"}
-
 ~~~~~~~
 import React from 'react';
 
@@ -116,7 +112,6 @@ export default App;
 如果这个变量不需要使用 App 组件中的任何内容（比如：参数来源于函数签名），我们也可以在 App 组件外部定义这个变量：
 
 {title="src/App.js",lang="javascript"}
-
 ~~~~~~~
 import React from 'react';
 
