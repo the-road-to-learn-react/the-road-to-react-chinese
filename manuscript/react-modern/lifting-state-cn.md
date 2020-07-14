@@ -8,7 +8,7 @@
 
 > The search term is needed in the App to filter the list before passing it to the List component as props. We'll need to **lift state up** from Search to App component to share the state with more components.
 
-在将 list 作为 props 传递给 List 组件之前，还需要在 App 中使用搜索词来过滤此列表。我们需要将 state 从 Search __提升__到 App 组件，以便与更多组件共享 state。
+在将 list 作为 props 传递给 List 组件之前，还需要在 App 中使用搜索词来过滤此列表。我们需要将 state 从 Search **提升** 到 App 组件，以便与更多组件共享 state。
 
 
 {title="src/App.js",lang="javascript"}
@@ -198,5 +198,5 @@ const App = () => {
 
 练习：
 
-* 检查[上一节的源码](remember to update link)。
-  * 确认[上一节之后的变更](remember to update link)。
+* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Lifting-State-in-React)。
+  * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Callback-Handler-in-JSX...hs/Lifting-State-in-React?expand=1)。
