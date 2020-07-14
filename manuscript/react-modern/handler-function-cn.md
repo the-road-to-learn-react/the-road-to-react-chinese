@@ -32,7 +32,7 @@ const App = () => {
 
 > Next, define a function -- which can be normal or arrow -- for the change event of the input field. In React, this function is called an **(event) handler**. Now the function can be passed to the `onChange` attribute (JSX named attribute) of the input field.
 
-随后定义一个函数，普通函数或者箭头函数都可以，用来处理 input 的 change 事件。在 React 中，这种函数叫做**（事件）处理函数**。现在可以把这个函数传给 input 的 `onChange` 属性了（JSX 命名的属性）。
+随后定义一个函数，普通函数或者箭头函数都可以，用来处理 input 的 change 事件。在 React 中，这种函数叫做 **（事件）处理函数**。现在可以把这个函数传给 input 的 `onChange` 属性了（JSX 命名的属性）。
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
