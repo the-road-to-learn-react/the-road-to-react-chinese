@@ -123,4 +123,4 @@ HTML 和 JavaScript 在 JSX 里合作地很愉快。HTML 中的 JavaScript 可�
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Handler-Function-in-JSX)。
 	* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Component-Definition...hs/Handler-Function-in-JSX?expand=1)。
-* 阅读更过关于 [React的事件](https://reactjs.org/docs/events.html)的文章。
+* 阅读更多关于 [React的事件](https://reactjs.org/docs/events.html)的文章。
