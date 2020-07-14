@@ -91,7 +91,7 @@ const List = props =>
 
 通过这样操作，我们已经避免了 list/stories 变量在 App 组件内污染全局作用域。因为 `stories` 不是在 App 组件被直接使用的，而是在它的其中一个子组件内，我们把它作为 props 传给了 List 组件。然后我们可以通过函数签名的第一个参数 `props` 来访问它。
 
-### Exercises:
+> ### Exercises:
 
 ### 练习：
 
