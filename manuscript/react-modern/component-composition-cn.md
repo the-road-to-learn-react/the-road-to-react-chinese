@@ -1,6 +1,6 @@
 ## React Component Composition
 
-## 组件组合
+## React 组件组合
 
 > Now we'll discover how to use a React element in the same fashion as an HTML element, with an opening and closing tag:
 
@@ -63,7 +63,7 @@ const InputWithLabel = ({
 
 > Now the React component's elements behave similar to native HTML. Everything that's passed between a component's elements can be accessed as children`in the component and be rendered somewhere. Sometimes when using a React component, you want to have more freedom from the outside what to render in the inside of a component:
 
-现在 React 组件元素表现的和原生 HTML 很类似了。所有在组件元素之间的部分，在组件中都可以通过 `children` 获取到，然后渲染出来。有时当使用一个 React 组件时，你希望在外部有更多自由去决定组件内部应该渲染什么：
+现在 React 组件元素表现的和原生 HTML 很类似了。所有在组件元素之间传递的部分，在组件中都可以通过 `children` 获取到，然后渲染出来。有时当使用一个 React 组件时，你希望在外部有更多自由去决定组件内部应该渲染什么：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -96,12 +96,10 @@ const App = () => {
 
 ### 练习：
 
-* Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Component-Composition).
-  * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Reusable-React-Component...hs/React-Component-Composition?expand=1).
-* Read more about React Component Composition ([0](https://www.robinwieruch.de/react-component-composition), [1](https://reactjs.org/docs/composition-vs-inheritance.html)).
-* Create a simple text component that renders a string and passes it as `children` to the InputWithLabel component.
-
-
+> * Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Component-Composition).
+>  * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Reusable-React-Component...hs/React-Component-Composition?expand=1).
+> * Read more about React Component Composition ([0](https://www.robinwieruch.de/react-component-composition), [1](https://reactjs.org/docs/composition-vs-inheritance.html)).
+> * Create a simple text component that renders a string and passes it as `children` to the InputWithLabel component.
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Component-Composition)。
 	* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Reusable-React-Component...hs/React-Component-Composition?expand=1)。
