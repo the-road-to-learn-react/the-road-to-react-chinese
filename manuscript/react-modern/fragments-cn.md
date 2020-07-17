@@ -46,7 +46,7 @@ const Search = ({ search, onSearch }) => [
 
 > This is one way to have multiple top-level elements in your JSX. It doesn't turn out very readable, though, as it becomes verbose with the additional key attribute. Another solution is to use a **React fragment**:
 
-这是一种解决 JSX 里同时需要多个顶层元素的方式。但看起来可读性并不好，而且需要一个额外的 key 属性，显得很冗余。另外一种解决方式就是使用 **React fragment** （片段）：
+这是一种解决 JSX 里同时需要多个顶层元素的方式。但看起来可读性并不好，而且需要一个额外的 key 属性，显得很冗余。另外一种解决方式就是使用 **React fragment** ：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -73,10 +73,10 @@ Fragment 可以用来把多个元素用一个顶层元素包起来，又不会�
 
 ### 练习：
 
-* Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Fragments).
- * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Custom-Hooks...hs/React-Fragments?expand=1).
-* Read more about [React fragments](https://reactjs.org/docs/fragments.html).
+> * Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Fragments).
+>   * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Custom-Hooks...hs/React-Fragments?expand=1).
+> * Read more about [React fragments](https://reactjs.org/docs/fragments.html).
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Fragments)。
-* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Custom-Hooks...hs/React-Fragments?expand=1)。
+  * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Custom-Hooks...hs/React-Fragments?expand=1)。
 * 阅读更多关于 [React fragments](https://reactjs.org/docs/fragments.html) 的内容。
