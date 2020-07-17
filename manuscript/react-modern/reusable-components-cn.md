@@ -94,7 +94,7 @@ so it is not specified from the outside. The
 from the function signature takes over for the input field.
 
 在 App 组件中，没有向 InputWithLabel 组件传递 `type` 参数，所以 `type` 没有从外部指定，而是从函数的
-默认参数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)中得到。
+[默认参数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)中得到。
 
 
 > With just a few changes we turned a specialized Search component into a more reusable component. 
@@ -115,8 +115,8 @@ We generalized the naming of the internal implementation details and gave the ne
  Would you pass it with `label="Search:"` as prop to the InputWithLabel component or hardcode it after the `<label htmlFor={id}>{label}:</label>` usage in the InputWithLabel component? We will see how to cope with this later.
 
 
-* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Reusable-React-Component).
-   * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Fragments...hs/Reusable-React-Component?expand=1).
-* 阅读更多关于[复用React 组件](https://www.robinwieruch.de/react-reusable-components).
+* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Reusable-React-Component)
+   * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Fragments...hs/Reusable-React-Component?expand=1)
+* 阅读更多关于[复用React 组件](https://www.robinwieruch.de/react-reusable-components)
 * 在之前我们使用纯文本 "Search:" 中带着 ":"。 你现在将如何处理呢？
  你会使用 `label="Search:"` 作为参数将其传递给 InputWithLabel 组件呢，还是将其硬编码在 InputWithLabel 组件`<label htmlFor={id}>{label}:</label>`中使用？稍后章节我们将学习如何抉择。
