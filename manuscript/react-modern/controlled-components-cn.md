@@ -2,11 +2,11 @@
 
 > **Controlled components** are not necessary React components, but HTML elements. Here, we'll learn how to turn the Search component and its input field into a controlled component.
 
-**受控组件**并不一定是 React 组件，也可以是 HTML 元素。这一节我们将学习如何把 Search 组件以及内部的输入栏转化为一个受控组件。
+**受控组件**并不一定是 React 组件，也可以是 HTML 元素。这一节我们将学习如何把 Search 组件以及内部的输入框转化为一个受控组件。
 
 > Let's go through a scenario that shows  why we should follow the concept of controlled components throughout our React application. After applying the following change -- giving the `searchTerm` an initial state -- can you spot the mistake in your browser?
 
-让我们看一个展示了为什么需要在我们的 React 应用中遵循受控组件概念的情景。在我们应用了以下改变之后：赋予 `searchTerm` 一个初始 state ，你能发现在你浏览器上出现的错误吗？
+让我们看一个展示为什么我们需要在 React 应用中遵循受控组件概念的情景。在我们应用了以下改变之后：赋予 `searchTerm` 一个初始 state ，你能发现在你浏览器上出现的错误吗？
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -23,11 +23,11 @@ const App = () => {
 
 > While the list has been filtered according to the initial search, the input field doesn't show the initial `searchTerm`. We want the input field to reflect the actual `searchTerm` used from the initial state; but it's only reflected through the filtered list.
 
-当这个列表基于初始搜索被过滤的时候，输入栏不会展示初始的 `searchTerm` 。我们期望输入栏反应 `searchTerm` 的实际初始 state ，但它只反映了被过滤的列表。
+当这个列表基于初始搜索被过滤的时候，输入框不会展示初始的 `searchTerm` 。我们期望输入框反应 `searchTerm` 的实际初始 state ，但它只反映了被过滤的列表。
 
 > We need to convert the Search component with its input field into a controlled component. So far, the input field doesn't know anything about the `searchTerm`. It only uses the change event to inform us of a change. Actually, the input field has a `value` attribute.
 
-因此我们需要把 Search 组件以及内部的输入栏转化成一个受控组件。到目前为止，这个输入栏还没有获知任何关于 `searchTerm` 的信息。它只使用了 change 事件来通知我们发生的改变。而实际上它还拥有一个 `value` 属性。
+因此我们需要把 Search 组件以及内部的输入框转化成一个受控组件。到目前为止，这个输入框还没有获知任何关于 `searchTerm` 的信息。它只使用了 change 事件来通知我们发生的改变。而实际上它还拥有一个 `value` 属性。
 
 
 {title="src/App.js",lang="javascript"}
@@ -69,7 +69,7 @@ const Search = props => (
 
 > Now the input field starts with the correct initial value, using the `searchTerm` from the React state. Also, when we change the `searchTerm`, we force the input field to use the value from React's state (via props). Before, the input field managed its own internal state natively with just HTML.
 
-现在输入栏开始用 React state 中的 `searchTerm` 作为正确的初始值。并且当我们改变 `searchTerm`的值时，我们强制输入栏使用了 React state 中的值 （通过 props）。而之前输入栏仅仅是以原生 HTML 的方式管理着自己的内部状态。
+现在输入框开始用 React state 中的 `searchTerm` 作为正确的初始值。并且当我们改变 `searchTerm ` 的值时，我们强制输入框使用了 React state 中的值 （通过 props）。而之前输入框仅仅是以原生 HTML 的方式管理着自己的内部状态。
 
 ![](images/controlled-component.png)
 
@@ -94,16 +94,14 @@ UI -> Side-Effect -> State -> UI -> ...
 
 每一次运行一个组件的函数会从 hooks 中使用*最新值*（比如当前 state ）并且*不会*重新执行初始化（比如初始 state）。这可能会显得有些奇怪，因为有人可能会假定 `useState` hooks 函数会用初始值重新初始化，但其实并没有。Hooks 只会在组件第一次渲染时初始化一次，而之后 React 会在内部追踪其最新值。
 
-### 练习:
+### 练习：
 
-* Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Controlled-Components).
- * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lifting-State-in-React...hs/React-Controlled-Components?expand=1).
-* Read more about [controlled components in React](https://www.robinwieruch.de/react-controlled-components/).
-* Experiment with `console.log()` in your React components and observe how your changes render, both initially and after the input field changes.
-
-
+> * Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Controlled-Components).
+>  * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lifting-State-in-React...hs/React-Controlled-Components?expand=1).
+> * Read more about [controlled components in React](https://www.robinwieruch.de/react-controlled-components/).
+> * Experiment with `console.log()` in your React components and observe how your changes render, both initially and after the input field changes.
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Controlled-Components)。
-* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lifting-State-in-React...hs/React-Controlled-Components?expand=1)。
+  * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Lifting-State-in-React...hs/React-Controlled-Components?expand=1)。
 * 阅读更多关于[ React 受控组件](https://www.robinwieruch.de/react-controlled-components/)的文章。
 * 尝试在你的 React 组件中通过 `console.log()` 观察你的改变是怎么渲染的，包括初始时和输入栏改变之后。
