@@ -6,16 +6,14 @@
 
 React 天生是声明式的，从 JSX 开始一直到 hook。我们告诉 React 去渲染*什么*，而不是*如何*去渲染。在使用 React 管理副作用的 hook 时（useEffect），我们表述的是什么时候去实现*什么*事情，而不是*如何*去实现。然而，有些时候我们希望通过指令式的方式去访问渲染好的 JSX 元素，比如下列这些场景：
 
-
-* read/write access to elements via the DOM API:
-  * measure (read) an element's width or height
-  * setting (write) an input field's focus state
-* implementation of more complex animations:
-  * setting transitions
-  * orchestrating transitions
-* integration of third-party libraries:
-  * [D3](https://d3js.org/) is a popular imperative chart library
-
+>* read/write access to elements via the DOM API:
+>	* measure (read) an element's width or height
+>	* setting (write) an input field's focus state
+>* implementation of more complex animations:
+>	* setting transitions
+>	* orchestrating transitions
+>* integration of third-party libraries:
+>	* [D3](https://d3js.org/) is a popular imperative chart library
 
 * 通过 DOM API 对元素做读写操作：
   * 测量（读）一个元素的宽或高
@@ -28,7 +26,7 @@ React 天生是声明式的，从 JSX 开始一直到 hook。我们告诉 React 
 
 > Because imperative programming in React is often verbose and counterintuitive, we'll walk only through a small example for setting the focus of an input field imperatively. For the declarative way, simply set the input field's autofocus attribute:
 
-因为 React 中的指令式编程大多数时候是啰嗦且反直觉的，我们这里就只举一小个例子，如何用指令式的方式把焦点设在输入框上。如果用声明式，只需要简单地设置输入框的自动聚焦（autofocus）属性：
+因为 React 中的指令式编程大多数时候是啰嗦且反直觉的，我们这里就只举一个小例子，如何用指令式的方式把焦点设在输入框上。如果用声明式，只需要简单地设置输入框的自动聚焦（autofocus）属性：
 
 {title="src/App.js",lang="javascript"}
 
@@ -164,33 +162,28 @@ const InputWithLabel = ({
 
 > All the essential steps are marked with comments that are explained step by step:
 
-* (A) First, create a `ref` with **React's useRef hook**. This `ref` object is a persistent value which stays intact over the lifetime of a React component. It comes with a property called `current`, which, in contrast to the `ref` object, can be changed.
-* (B) Second, the `ref` is passed to the input field's JSX-reserved `ref` attribute and the element instance is assigned to the changeable `current` property.
-* (C) Third, opt into React's lifecycle with React's useEffect Hook, performing the focus on the input field when the component renders (or its dependencies change).
-* (D) And fourth, since the `ref` is passed to the input field's `ref` attribute, its `current` property gives access to the element. Execute its focus programmatically as a side-effect, but only if `isFocused` is set and the `current` property is existent.
+> * (A) First, create a `ref` with **React's useRef hook**. This `ref` object is a persistent value which stays intact over the lifetime of a React component. It comes with a property called `current`, which, in contrast to the `ref` object, can be changed.
+> * (B) Second, the `ref` is passed to the input field's JSX-reserved `ref` attribute and the element instance is assigned to the changeable `current` property.
+> * (C) Third, opt into React's lifecycle with React's useEffect Hook, performing the focus on the input field when the component renders (or its dependencies change).
+> * (D) And fourth, since the `ref` is passed to the input field's `ref` attribute, its `current` property gives access to the element. Execute its focus programmatically as a side-effect, but only if `isFocused` is set and the `current` property is existent.
 
 所有必要的操作都用注释标记出来了，这里会一步一步讲解：
 
 * (A) 首先，使用 **React useRef hook** 创建一个 `ref` （引用）。这个 `ref` 对象是一个持久的值，在整个 React 组件生命周期里不会受到影响。它有一个 `current` （当前）属性，和 `ref` 对象本身正好相反，它是可以被更改的。
 * (B) 其次，`ref` 通过 JSX 保留的 `ref` 标签传给输入框，这个元素实例就会被赋给可变的 `current` 属性。
-* (C) 再次， 使用 React useEffect Hook 进入 React 的生命周期，当组件渲染（或是它的依赖发生改变）时，使焦点落在输入框上。
+* (C) 再次，使用 React useEffect Hook 进入 React 的生命周期，当组件渲染（或是它的依赖发生改变）时，使焦点落在输入框上。
 * (D) 最后，因为 `ref` 被传给了输入框的 `ref` 属性，它的 `current` 属性让我们可以访问到当前元素。通过程序使其聚焦作为一种副作用，但仅当设置了 `isFocused`  并且 `current` 属性存在时。
 
 > This was an example of how to move from declarative to imperative programming in React. It's not always possible to go the declarative way, so the imperative approach is necessary. This lesson is for the sake of learning about the DOM API in React.
 
 这只是个如何在 React 中从声明式转换为指令式编程的例子。因为并不是所有时候都能使用声明的方式，所以指令式还是有必要的。本课是为了学习在 React 中如何使用 DOM API。
 
-
-
 ### 练习：
 
-* Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Imperative-React).
-  * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Component-Composition...hs/Imperative-React?expand=1).
-* Read more about [React's useRef Hook](https://reactjs.org/docs/hooks-reference.html#useref).
-
-
+> * Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Imperative-React).
+>   * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Component-Composition...hs/Imperative-React?expand=1).
+> * Read more about [React's useRef Hook](https://reactjs.org/docs/hooks-reference.html#useref).
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/Imperative-React)。
-* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Component-Composition...hs/Imperative-React?expand=1)。
+  * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Component-Composition...hs/Imperative-React?expand=1)。
 * 阅读更多关于 [React useRef Hook](https://reactjs.org/docs/hooks-reference.html#useref) 的文章。
-
