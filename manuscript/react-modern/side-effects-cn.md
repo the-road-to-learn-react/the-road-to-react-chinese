@@ -4,11 +4,11 @@
 
 >  Next we'll add a feature to our Search component in the form of another React hook. We'll make the Search component remember the most recent search interaction, so the application opens it in the browser whenever it restarts.
 
-接下来我们要给 Search 组件增加一个新的功能，让 Search 组件记住最近一次搜索操作，这样每次重启之后，应用就会在浏览器里把它打开。
+接下来我们要给 Search 组件增加一个新的功能，让 Search 组件记住最近一次搜索操作，这样每次重启应用之后，应用就会在浏览器里把它打开。
 
 > First, use the local storage of the browser to store the `searchTerm` accompanied by an identifier. Next, use the stored value, if there a value exists, to set the initial state of the `searchTerm`. Otherwise, the initial state defaults to our initial state (here "React") as before:
 
-首先，用浏览器的本地存储来存 `searchTerm` 和它的标识符。然后，用存储的值，如果存在的话，作为 `searchTerm` 的初始值。否则就和之前一样，使用我们的初始状态（这里指 "React" ）作为默认的初始值：
+首先，用浏览器的本地存储来存储 `searchTerm` 和它的标识符。然后，用存储的值，如果存在的话，作为 `searchTerm` 的初始 state。否则就和之前一样，使用我们的初始 state（这里指 "React" ）作为默认的初始值：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -35,11 +35,11 @@ const App = () => {
 
 > When using the input field and refreshing the browser tab, the browser should remember the latest search term. Using the local storage in React can be seen as a **side-effect** because we interact outside of React's domain by using the browser's API.
 
-当用户使用输入框然后刷新浏览器标签页的时候，浏览器应该可以记住最后一个搜索条目。在 React 里使用本地存储可以被看作是一种**副作用**，因为我们跨出了 React 的领域去和浏览器的 API 产生了互动。
+当用户使用输入框然后刷新浏览器标签页的时候，浏览器应该可以记住最后一个搜索项。在 React 里使用本地存储可以被看作是一种**副作用**，因为我们跨出了 React 的领域去和浏览器的 API 产生了互动。
 
 > There is one flaw, though. The handler function should mostly be concerned about updating the state, but now it has a side-effect. If we use the `setSearchTerm` function elsewhere in our application, we will break the feature we implemented because we can't be sure the local storage will also get updated. Let's fix this by handling the side-effect at a dedicated place. We'll use **React's useEffect Hook** to trigger the side-effect each time the `searchTerm` changes:
 
-不过这里还有个问题。处理函数应该只关心如何更新状态，但它现在还有一个副作用。如果我们在应用的其他地方调用 `setSearchTerm` 就可能会破坏已有功能，因为无法确定本地缓存是否也会被更新。我们可以通过把对副作用的处理固定在某个地方来解决这个问题。这里将在每次 `searchTerm` 发生变化的时候，用到 **React 的 useEffect Hook** 来触发副作用：
+不过这里还有个问题。处理函数应该只关心如何更新 state，但它现在还有一个副作用。如果我们在应用的其他地方调用 `setSearchTerm` 就可能会破坏已有功能，因为无法确定本地缓存是否也会被更新。我们可以通过把对副作用的处理固定在某个地方来解决这个问题。这里将在每次 `searchTerm` 发生变化的时候，用到 **React 的 useEffect Hook** 来触发副作用：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -72,7 +72,7 @@ React 的 useEffect Hook 需要两个参数：第一个参数是一个会产生�
 
 > If the dependency array of React's useEffect is an empty array, the function for the side-effect is only called once, after the component renders for the first time. The hook lets us opt into React's component lifecycle. It can be triggered when the component is first mounted, but also one of its dependencies are updated.
 
-如果 useEffect 的依赖数组是个空数组，那么管理副作用的这个函数只会被执行一次，也就是在组件第一次渲染之后。这个 hook 使我们可以有选择性地使用 React 的组件生命周期。它会在组件第一次挂载的时候被触发，在它的依赖更新时也会触发。
+如果 useEffect 的依赖数组是个空数组，那么这个管理副作用的函数只会被执行一次，也就是在组件第一次渲染之后。这个 hook 使我们可以有选择性地使用 React 的组件生命周期。它会在组件第一次挂载的时候被触发，也可以在它的依赖更新时被触发。
 
 > Using React `useEffect` instead of managing the side-effect in the handler has made the application more robust. *Whenever* and *wherever* `searchTerm` is updated via `setSearchTerm`, local storage will always be in sync with it.
 
@@ -82,18 +82,18 @@ React 的 useEffect Hook 需要两个参数：第一个参数是一个会产生�
 
 ### 练习:
 
-* > Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Side-Effects).
+> * Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Side-Effects).
 
- * > Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Props-Handling...hs/React-Side-Effects?expand=1).
+> * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Props-Handling...hs/React-Side-Effects?expand=1).
 
-* > Read more about React's useEffect Hook ([0](https://reactjs.org/docs/hooks-effect.html), [1](https://reactjs.org/docs/hooks-reference.html#useeffect)).
+> * Read more about React's useEffect Hook ([0](https://reactjs.org/docs/hooks-effect.html), [1](https://reactjs.org/docs/hooks-reference.html#useeffect)).
 
-* > Give the first argument's function a `console.log()` and experiment with React's useEffect Hook's dependency array. Check the logs for an empty dependency array too.
+> * Give the first argument's function a `console.log()` and experiment with React's useEffect Hook's dependency array. Check the logs for an empty dependency array too.
 
 
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Side-Effects)。
-* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Props-Handling...hs/React-Side-Effects?expand=1)。
+	* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Props-Handling...hs/React-Side-Effects?expand=1)。
 * 阅读更多关于 React 的 useEffect Hook 的文章：([0](https://reactjs.org/docs/hooks-effect.html), [1](https://reactjs.org/docs/hooks-reference.html#useeffect))。
 * 在第一个函数参数里使用 `console.log()` 来测试 React useEffect Hook 的依赖数组。也看一下依赖数组为空的情况下，日志是什么样的。
 
