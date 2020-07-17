@@ -1,4 +1,4 @@
-## 自定义 React Hook（高阶）
+## 自定义 React Hook（高级）
 
 > React Custom Hooks (Advanced)
 
@@ -8,11 +8,11 @@
 
 > We'll eventually cover more hooks that come with React -- in this volume and in other resources -- though we won't cover all of them here. Next we'll tackle **React custom Hooks**; that is, building a hook yourself.
 
-最终我们会讲到更多的 React 自带 hook —— 在这里或是其他材料里 —— 但肯定不会覆盖所有的。接下来我们要来对付 **自定义的 React Hook**；也就是自己来打造一个 hook。
+最终我们会讲到更多React 自带的 hook （在这里或是其他材料里），但肯定不会涵盖所有的。接下来我们要来对付 **自定义的 React Hook**；也就是自己来打造一个 hook。
 
 > We will use the two hooks we already possess to create a new custom hook called `useSemiPersistentState`, named as such because it manages state yet synchronizes with the local storage. It's not fully persistent because clearing the local storage of the browser deletes relevant data for this application. Start by extracting all relevant implementation details from the App component into this new custom hook:
 
-我们将用到两个已有的 hook 来创建一个新的自定义 hook 叫做 `useSemiPersistentState`，这样命名的原因是它不但管理状态还可以和本地存储做同步。它不是一个完全的持久化，因为清除浏览器的本地存储会将应用相关的数据都删掉。我们可以从把所有相关的实现细节从 App 组件里抽出来，放到这个新的自定义 hook 里开始：
+我们将用到两个已有的 hook 来创建一个新的自定义 hook 叫做 `useSemiPersistentState`，这样命名的原因是它不但管理 state 还可以和本地存储同步。它不是一个完全的持久化，因为清除浏览器的本地存储会将应用相关的数据都删掉。我们可以从把所有相关的实现细节从 App 组件里抽出来，放到这个新的自定义 hook 里开始：
 
 {title="src/App.js",lang="javascript"}
 
@@ -84,7 +84,7 @@ const App = () => {
 
 > Another goal of a custom hook should be reusability. All of this custom hook's internals are about the search domain, but the hook should be for a value that's set in state and synchronized in local storage. Let's adjust the naming therefore:
 
-自定义 hook 的另外一个目标应该是可复用性。目前这个自定义 hook 的内部看起来还是搜索相关的，但它应该是用来管理状态里的值并将它同步到本地存储的。那么让我们来重新命一下名：
+自定义 hook 的另外一个目标应该是可复用性。目前这个自定义 hook 的内部看起来还是搜索相关的，但它应该是用来管理 state 里的值并将它同步到本地存储的。那么让我们来重新命一下名：
 
 {title="src/App.js",lang="javascript"}
 
@@ -110,7 +110,7 @@ const useSemiPersistentState = () => {
 
 > We handle an abstracted "value" within the custom hook. Using it in the App component, we can name the returned current state and state updater function anything domain-related (e.g. `searchTerm` and `setSearchTerm`) with array destructuring.
 
-我们用自定义 hook 处理的是一个抽象的值 “value”。在 App 组件里，我们可以在数组解构的过程中，使用有业务含义的词来命名它所返回的当前状态和状态更新函数，例如 `searchTerm` 和 `setSearchTerm`。
+我们用自定义 hook 处理的是一个抽象的值 “value”。在 App 组件里，我们可以在数组解构的过程中，使用有业务含义的词来命名它所返回的当前 state 和 state 更新函数，例如 `searchTerm` 和 `setSearchTerm`。
 
 > There is still one problem with this custom hook. Using the custom hook more than once in a React application leads to an overwrite of the "value"-allocated item in the local storage. To fix this, pass in a key:
 
@@ -155,7 +155,7 @@ const App = () => {
 
 > Another improvement is to give the custom hook the initial state we had from the outside:
 
-我们还可以进一步改进它，让自定义 hook 从外部接受一个初始状态：
+我们还可以进一步改进它，让自定义 hook 从外部接受一个初始 state：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -195,11 +195,10 @@ const App = () => {
 
 ### 练习：
 
-* > Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Custom-Hooks).
- * > Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Side-Effects...hs/React-Custom-Hooks?expand=1).
-* > Read more about [React Hooks](https://www.robinwieruch.de/react-hooks) to get a good understanding of them. They are the bread and butter in React function components, so it's important to really understand them ([0](https://reactjs.org/docs/hooks-overview.html), [1](https://reactjs.org/docs/hooks-custom.html)).
-
+> * Confirm your [source code for the last section](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Custom-Hooks).
+> * Confirm the [changes from the last section](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Side-Effects...hs/React-Custom-Hooks?expand=1).
+> *  Read more about [React Hooks](https://www.robinwieruch.de/react-hooks) to get a good understanding of them. They are the bread and butter in React function components, so it's important to really understand them ([0](https://reactjs.org/docs/hooks-overview.html), [1](https://reactjs.org/docs/hooks-custom.html)).
 
 * 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Custom-Hooks)。
-* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Side-Effects...hs/React-Custom-Hooks?expand=1)。
+  * 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Side-Effects...hs/React-Custom-Hooks?expand=1)。
 * 阅读更多关于 [React Hooks](https://www.robinwieruch.de/react-hooks) 的文章来深入理解这个概念。它们和 React 函数组件的关系，就如同豆浆和油条，理解它们对你来说是至关重要的。([0](https://reactjs.org/docs/hooks-overview.html), [1](https://reactjs.org/docs/hooks-custom.html))
