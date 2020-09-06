@@ -4,7 +4,7 @@
 
 > All state management in this application makes heavy use of React's useState Hook. More sophisticated state management gives you **React's useReducer Hook**, though. Since the concept of reducers in JavaScript splits the community in half, we won't cover it extensively here, but the exercises at the end of this section should give you plenty of practice.
 
-虽然在这个应用中的所有状态管理都大量使用了 React 中 useState 这个 hook。但是更复杂的 state 管理可以用 React 中的 useReducer 这个 hook。由于 JavaScript 中的 reducers 概念在社区中已有半壁江山，因此我们不会在这赘述，但在这一节的末尾会给你提供大量的练习。
+虽然在这个应用中的所有状态管理都大量使用了 React 中的 useState hook。但是更复杂的 state 管理可以用 React 中的 useReducer hook。由于 JavaScript 中的 reducers 概念在社区中已有半壁江山，因此我们不会在这赘述，但在这一节的末尾会给你提供大量的练习。
 
 > We'll move the `stories` state management from the `useState` hook to a new `useReducer` hook. First, introduce a reducer function outside of your components. A reducer function always receives `state` and `action`. Based on these two arguments, a reducer always returns a new state:
 
