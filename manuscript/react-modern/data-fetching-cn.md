@@ -4,7 +4,7 @@
 
 > We are currently fetching data, but it's still pseudo data coming from a promise we set up ourselves. The lessons up to now about asynchronous React and advanced state management were preparing us to fetch data from a real third-party API. We will use the reliable and informative [Hacker News API](https://hn.algolia.com/api) to request popular tech stories.
 
-我们目前正在获取数据，但它仍然是来自我们自己用 Promise 设置的伪数据。到现在为止关于异步 React 和高级 State 管理的课程都在为我们从真正的第三方 API 中获取数据做准备。我们将使用可靠且丰富的 [Hacker News API](https://hn.algolia.com/api) 来请求流行的科技新闻。
+我们目前正在获取数据，但它仍然是来自我们自己用 Promise 设置的假数据。到现在为止关于异步 React 和高级 State 管理的课程都在为我们从真正的第三方 API 中获取数据做准备。我们将使用可靠且丰富的 [Hacker News API](https://hn.algolia.com/api) 来请求流行的科技新闻。
 
 > Instead of using the `initialStories` array and `getAsyncStories` function (you can remove these), we will fetch the data directly from the API:
 
@@ -46,7 +46,7 @@ const App = () => {
 
 > First, the `API_ENDPOINT` (A) is used to fetch popular tech stories for a certain query (a search topic). In this case, we fetch stories about React (B). Second, the native browser's [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is used to make this request (B). For the fetch API, the response needs to be translated into JSON (C). Finally, the returned result follows a different data structure (D), which we send as payload to our component's state.
 
-首先，`API_ENDPOINT` (A) 用于获取热门科技新闻的某个查询(搜索主题)。在本例中，我们获取 React 相关的新闻。其次，用浏览器原生的 [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 来执行这个请求 (B), 对于 fetch API，需要将返回数据翻译成 JSON (C)。最后，返回的结果遵循不同的数据结构 (D)， 我们将其作为有效数据发送给我们的组件 state。
+首先，`API_ENDPOINT` (A) 用于获取热门科技新闻的某个查询(搜索主题)。在本示例中，我们获取 React 相关的新闻。其次，用浏览器原生的 [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 来执行这个请求 (B), 对于 fetch API，需要将返回数据翻译成 JSON (C)。最后，返回的结果遵循不同的数据结构 (D)， 我们将其作为有效数据发送给我们的组件 state。
 
 > In the previous code example we used [JavaScript's Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) for a string interpolation. When this feature wasn't available in JavaScript, we'd have used the + operator on strings instead:
 
