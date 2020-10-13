@@ -110,7 +110,7 @@ const App = () => {
 
 > Re-fetching data each time someone types into the input field isn't optimal, so we'll correct that soon. Because this implementation stresses the API, you might experience errors if you use requests too often.
 
-每次在输入框中键入内容就重新获取数据不是最佳的选择，这一点我们将在不久后修复。因为此实现会给 API 带来压力，如果你发起太多次的请求，则可能会发生错误。
+每次在输入框中输入内容就重新获取一次数据并不是最佳方案，这一点我们将在稍后修复。因为这种实现会给 API 造成压力，如果你发起太多次的请求，则可能会发生一些错误。
                 
                 
 > ### Exercises:                
