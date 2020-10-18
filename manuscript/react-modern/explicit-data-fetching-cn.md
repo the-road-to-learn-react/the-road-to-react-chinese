@@ -4,7 +4,7 @@
 
 > Re-fetching all data each time someone types in the input field isn't optimal. Since we're using a third-party API to fetch the data, its internals are out of our reach. Eventually, we will incur [rate limiting](https://en.wikipedia.org/wiki/Rate_limiting), which returns an error instead of data.
 
-每次在输入框中键入内容就重新获取数据不是最佳的选择。因为我们使用的是第三方 API 去获取数据，频繁的调用可能引发 [限速](https://en.wikipedia.org/wiki/Rate_limiting)，接口将返回错误。
+每次在输入框中输入内容就重新获取数据不是最佳的选择。因为我们使用的是第三方 API 去获取数据，频繁的调用可能引发 [限速](https://en.wikipedia.org/wiki/Rate_limiting)，接口将返回错误。
 
 > To solve this problem, change the implementation details from implicit to explicit data (re-)fetching. In other words, the application will refetch data only if someone clicks a confirmation button. First, add a button element for the confirmation to the JSX:
 
@@ -84,7 +84,7 @@ const App = () => {
 
 > Third, instead of running the data fetching side-effect on every `searchTerm` change -- which would happen each time the input field's value changes -- the `url` is used. The `url` is set explicitly by the user when the search is confirmed via our new button:
 
-之后，替换掉每次因输入框值改变，继而 `searchTerm`(`url`) 变化带来的数据请求，改为每次用户点击按钮（确认按钮）来触发：
+之后，将每次因输入框值改变 `searchTerm`(`url`) 而导致的数据请求，改为每次用户点击确认按钮来触发：
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
