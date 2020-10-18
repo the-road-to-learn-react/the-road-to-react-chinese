@@ -2,7 +2,7 @@
 
 > CSS Modules are an advanced **CSS-in-CSS** approach. The CSS file stays the same, where you could apply CSS extensions like Sass, but its use in React components changes. To enable CSS modules in create-react-app, rename the *src/App.css* file to *src/App.module.css*. This action is performed in the command line from your project's directory:
 
-CSS Modules 是一种先进的 **CSS-in-CSS** 方法。CSS 文件保持不变，你可以应用 Sass 等 CSS 扩展，但它在 React 组件中的使用会发生变化。要在 `create-react-app` 中启用 CSS 模块，请将 *src/App.css* 文件重命名为 *src/App.module.css*。这个操作是在你的项目目录的命令行中进行的。
+CSS Modules 是一种高级的 **CSS-in-CSS** 方法。CSS 文件保持不变，你可以应用 Sass 等 CSS 扩展，但它在 React 组件中的使用会发生变化。要在 `create-react-app` 中启用 CSS 模块，请将 *src/App.css* 文件重命名为 *src/App.module.css*。这个操作是在你的项目目录的命令行中进行的。
 
 {title="Command Line",lang="text"}
 ~~~~~~~
