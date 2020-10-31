@@ -43,7 +43,7 @@ class App extends React.Component {
 
 > If the state has more than one property in its state object, the `setState` method performs only a shallow update. Only the properties passed to `setState` are overwritten, and all other properties in the state object stay intact. Since state management is important for frontend applications, there was no way around class components without hooks for function components.
 
-如果 state 中有一个以上的属性，`setState` 方法只执行浅更新。只有传递给 `setState` 的属性被覆盖，而状态对象中的所有其它属性都保持不变。由于状态管理对于前端应用来说是很重要的，所以函数组件在没有 hook 的情况下，是无法达到类组件的功能的。
+如果 state 中有一个或多个属性，`setState` 方法只执行浅更新。只有传递给 `setState` 的属性被覆盖，而状态对象中的所有其它属性都保持不变。由于状态管理对于前端应用来说是很重要的，所以函数组件在没有 hook 的情况下，是无法达到类组件的功能的。
 
 > In a React class component, there are two dedicated APIs (`this.state` and `this.setState`) to manage a component's state. In a function component, React's useState and useReducer hooks handle this. Related items are packed into one state hook, while a class component must use a general state API. This was one of the major reasons to introduce React Hooks, and move away from class components.
 
