@@ -3,7 +3,7 @@
 
 > React has changed a lot since 2013. The iterations of its library, how React applications are written, and especially its components have all changed drastically. However, many React applications were built over the last few years, so not everything was created with the current status quo in mind. This section of the book covers React's legacy.
 
-自2013年以来，React 发生了很多变化。它的库的迭代，React 应用的编写方式，尤其是它的组件都发生了翻天覆地的变化。然而，许多 React 应用都是在过去几年中构建的，所以并不是所有的东西都是按照目前的情况来创建的。本书的这一节主要介绍了 React 的遗留问题。
+自2013年以来，React 发生了很多变化。库的迭代，React 应用的编写方式，尤其是它的组件都发生了翻天覆地的变化。然而，许多 React 应用都是在过去几年中构建的，所以并不是所有的东西都是按照目前的情况来创建的。本书的这一节主要介绍了 React 的遗留问题。
 
 > I won't cover all that's considered legacy in React, because some features have been revamped more than once. You may see the previous iteration of the feature in older React applications, but will probably be different than the current.
 
