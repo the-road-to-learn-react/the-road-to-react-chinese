@@ -44,7 +44,7 @@ describe('something truthy', () => {
 
 > Fortunately, create-react-app comes with Jest. You can run the test using the interactive create-react-app test script on the command line. The output for all test cases will be presented in your command line interface.
 
-幸运的是，create-react-app 自带 Jest。你可以在命令行中使用交互式 create-react-app 测试脚本来运行测试。所有测试用例的输出都将显示在你的命令行界面中。 
+幸运的是，create-react-app 自带 Jest。你可以在命令行中使用交互式 create-react-app 测试脚本来运行测试。所有测试用例的输出都将显示在你的命令行界面中。
 
 {title="Command Line",lang="text"}
 
@@ -91,7 +91,7 @@ describe('truthy and falsy', () => {
 
 > The "it"-block describes one test case. It comes with a test description that returns success or failure. We can also wrap this block into a "describe"-block that defines our test suite with many "it"-blocks for one specific component. Both blocks are used to organize your test cases. Note that the `it` function is known in the JavaScript community as a single-test case function; in Jest, however, `it` is often used as an alias `test` function.
 
-"it"块描述了一个测试用例。它附带了一个在测试成功或失败时返回的测试描述。我们也可以将这个块写入 "describe" 块，该块用许多个 "it" 块定义了一个针对特殊组件的测试套件。这两个块都用来组织你的测试用例。需要注意的是 `it` 函数在 JavaScript 社区中被称为单测试用例函数；但是在 Jest 中，`it` 通常被用做 `test` 函数的别名。
+`it` 块描述了一个测试用例。它附带了一个在测试成功或失败时返回的测试描述。我们也可以将这个块写入 `describe` 块，该块用许多个 `it` 块定义了一个针对特殊组件的测试套件。这两个块都用来组织你的测试用例。需要注意的是 `it` 函数在 JavaScript 社区中被称为单测试用例函数；但是在 Jest 中，`it` 通常被用做 `test` 函数的别名。
 
 {title="src/App.test.js",lang="javascript"}
 
