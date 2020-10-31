@@ -3,12 +3,11 @@
 
 > There are many ways to style a React application, and there are lengthy debates about the best **styling strategy** and **styling approach**. We'll go over a few of these approaches without giving them too much weight. There will be some pro and con arguments, but it's mostly a matter of what fits best for developers and teams.
 
-React 应用中写样式的方法有很多，关于最好的**样式策略**和**样式方法**的争论也很漫长。我们将介绍几种方法，不会给他们太多的负担。目前有正反两方面的论点，但主要是看什么最适合开发者和团队。
-
+React 应用中写样式的方法有很多，关于最好的**样式策略**和**样式方法**也争论了很久。我们将介绍几种方法，但不会给个权重来说明这些方法哪个更好。目前有正反两方面的论点，但主要是看什么最适合开发者和团队。
 
 > We will begin React styling with common CSS in React, but then explore two alternatives for more advanced **CSS-in-CSS** (**CSS Modules**) and **CSS-in-JS** (**Styled Components**) strategies. CSS Modules and Styled Components are only two approaches out of many in both groups of strategies. We'll also cover how to include scalable vector graphics (SVGs), such as a logo or icons, in our React application.
 
-我们将从 React 中常见的 CSS 样式开始，但随后我们将探讨两种更高级的 **CSS-in-CSS**（**CSS模块**）和 **CSS-in-JS**（**样式组件**）策略。CSS 模块和样式组件只是这两组策略中的两种方法。我们也将介绍如何在 React 应用程序中包含可扩展的矢量图形（SVG），如徽标或图标等。
+我们将从 React 中常见的 CSS 样式开始，但随后我们将探讨两种更高级的 **CSS-in-CSS**（**CSS模块**）和 **CSS-in-JS**（**样式组件**）策略。CSS 模块和样式组件只是这两组策略中的两种方法。我们也将介绍如何在 React 应用程序中包含可扩展的矢量图形（SVG），如Logo或图标等。
 
 ![](images/css-style-strategies.png)
 
@@ -98,7 +97,7 @@ import './App.css';
 
 > You should see the first stylings taking effect in your application when you start it again. Next, we will head over to the Item component. Some of its elements receive the `className` attribute too, however, we are also using a new styling technique here:
 
-当您再次启动应用程序时，您应该会看到第一个样式在您的应用程序中生效。接下来，我们看一下 Item 组件。它的一些元素也会接收 "className" 属性，但是，我们在这里也使用了一种新的样式化技术。
+当再次启动应用程序时，应该会看到第一个样式已经在应用程序中生效。接下来，我们看一下 Item 组件。它的一些元素也会接收 "className" 属性，但是，我们在这里也使用了一种新的样式化技术。
 
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
@@ -131,7 +130,7 @@ const Item = ({ item, onRemoveItem }) => (
 
 > As you can see, we can also use the native `style` attribute for HTML elements. In JSX, style can be passed as an inline JavaScript object to these attributes. This way we can define dynamic style properties in JavaScript files rather than mostly static CSS files. This approach is called **inline style**, which is useful for quick prototyping and dynamic style definitions. Inline style should be used sparingly, however, as a separate style definition keeps the JSX more concise.
 
-如您所见，我们也可以使用 HTML 元素的原生 `style` 属性。在 JSX 中，style 可以作为一个内联的 JavaScript 对象传递这些属性。这样我们就可以在 JavaScript 文件中定义动态样式属性，而不是大部分的静态 CSS 文件。这种方法被称为**内联样式**，它对于快速原型设计和动态样式定义非常有用。然而，内联样式应该慎用，因为单独的样式定义可以让 JSX 更简洁。
+如你所见，我们也可以使用 HTML 元素的原生 `style` 属性。在 JSX 中，style 可以作为一个内联的 JavaScript 对象传递这些属性。这样我们就可以在 JavaScript 文件中定义动态样式属性，而不是大部分的静态 CSS 文件。这种方法被称为**内联样式**，它对于快速原型设计和动态样式定义非常有用。然而，内联样式应该慎用，因为单独的样式定义可以让 JSX 更简洁。
 
 > In your *src/App.css* file, define the new CSS classes. Basic CSS features are used. Advanced CSS features (e.g. nesting) from CSS extensions (e.g. Sass) are not included in this example, as they are [optional configurations](https://create-react-app.dev/docs/adding-a-sass-stylesheet/).
 
