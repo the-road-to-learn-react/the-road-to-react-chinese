@@ -75,10 +75,10 @@ const Item = ({ item, onRemoveItem }) => (
 
 creat-react-app 项目让使用 SVG 变得简单直接，不需要额外的配置。如果你用 Webpack 等构建工具从头开始创建一个 React 项目，那就不一样了，因为你必须自己去处理。总之，SVG 可以让你的应用程序更加平易近人，所以在你觉得适合的时候就可以使用它们。
 
-### 练习：
+### 练习
 
-* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/CSS-in-React-SVG)。
-  * 检查[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/CSS-in-React...hs/CSS-in-React-SVG?expand=1)。
+* 检查[上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/CSS-in-React-SVG)
+* 确认[上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/CSS-in-React...hs/CSS-in-React-SVG?expand=1)
 * 阅读更多关于[create-react-app 中的 SVGs](https://create-react-app.dev/docs/adding-images-fonts-and-files)。
 * 阅读更多关于[React 中的 SVG 背景图案](https://www.robinwieruch.de/react-svg-patterns)。
 * 在你的应用程序中添加另一个 SVG 图标。

@@ -1,12 +1,6 @@
-> ## TypeScript in React
-
 ## 在React中使用TypeScript
 
-> TypeScript for JavaScript and React have many benefits for developing robust applications. Instead of getting type errors on runtime in the command line or browser, TypeScript integration presents them during compile time inside the IDE. It shortens the feedback loop of JavaScript development. While it improves the developer experience, the code also becomes more self-documenting and readable, because every variable is defined with a type. Also moving code blocks or performing a larger refactoring of a code base becomes much more efficient. Statically typed languages like TypeScript are trending because of their benefits over dynamically typed languages like JavaScript. It's useful to learn more [about Typescript](https://www.typescriptlang.org/index.html) whenever possible.
-
 在 JavaScript 和 React 中使用 TypeScript，对于开发强大的应用程序有许多好处。TypeScript 集成后不会在运行时在命令行或浏览器中出现类型错误，而是会在 IDE 内编译时显示它们。它缩短了 JavaScript 开发的反馈循环的周期。TypeScript 不仅改善了开发人员的体验，也让代码变得更加自文档化，并且增加可读性，因为每个变量都使用了类型定义。同样的，移动代码块或执行更大的代码库的重构也变得更加高效。诸如 TypeScript 之类的静态类型语言是发展趋势，因为它们比诸如 JavaScript 之类的动态类型语言具有更多优势。所以，尽可能多地了解 [Typescript](https://www.typescriptlang.org/index.html) 是非常有用的。
-
-> To use TypeScript in React, install TypeScript and its dependencies into your application using the command line. If you run into obstacles, follow the official TypeScript installation instructions for [create-react-app](https://create-react-app.dev/docs/adding-typescript/):
 
 要在 React 中使用 TypeScript，请使用命令行将 TypeScript 及其依赖项安装到你的应用程序中。如果遇到障碍，请遵循官方 TypeScript 安装说明中的 [create-react-app](https://create-react-app.dev/docs/adding-typescript/)：
 
@@ -16,8 +10,6 @@ npm install --save typescript @types/node @types/react
 npm install --save typescript @types/react-dom @types/jest
 ~~~~~~~
 
-> Next, rename all JavaScript files (*.js*) to TypeScript files (*.tsx*).
-
 接下来，将所有 JavaScript 文件(*.js*)重命名为 TypeScript 文件(*.tsx*)。
 
 {title="Command Line",lang="text"}
@@ -25,8 +17,6 @@ npm install --save typescript @types/react-dom @types/jest
 mv src/index.js src/index.tsx
 mv src/App.js src/App.tsx
 ~~~~~~~
-
-> Restart your development server in the command line. You may encounter compile errors in the browser and IDE. If the latter doesn't work, try installing a TypeScript plugin for your editor, or extension for your IDE. After the initial TypeScript in React setup, we'll add type safety for the entire *src/App.tsx* file, starting with typing the arguments of the custom hook:
 
 然后在命令行中重新启动开发服务器。你可能会在浏览器和 IDE 中遇到编译错误的问题。如果是 IDE 没有正确显示编译错误，请尝试为你的编辑器安装 TypeScript 插件，或者为 IDE 安装扩展程序。在 React 设置中初始化 TypeScript 之后，我们将为整个 *src/App.tsx* 文件添加安全类型，从编写自定义 hook 的参数开始：
 
@@ -50,8 +40,6 @@ const useSemiPersistentState = (
 };
 ~~~~~~~
 
-> Adding types to the function's arguments is more about Javascript than React. We are telling the function to expect two arguments, which are JavaScript string primitives. Also, we can tell the function to return an array (`[]`) with a `string` (state), and tell functions like `state updater function` that take a `value` to return nothing (`void`):
-
 为函数的参数添加类型定义的做法主要关注在 Javascript，而不是 React。我们定义该函数需要两个参数，并且两个参数都是 JavaScript 中的基本类型 string。同样的，我们可以定义该函数的返回值类型为字符串数组，并告诉一些类似 `state updater function` 的方法，该函数不返回任何值(`void`)：
 
 {title="src/App.tsx",lang="javascript"}
@@ -74,8 +62,6 @@ const useSemiPersistentState = (
 };
 ~~~~~~~
 
-> Related to React though, considering the previous type safety improvements for the custom hook, we hadn't to add types to the internal React hooks in the function's body. That's because **type inference** works most of the time for React hooks out of the box. If the *initial state* of a React useState Hook is a JavaScript string primitive, then the returned *current state* will be inferred as a string and the returned *state updater function* will only take a string as argument and return nothing:
-
 尽管与 React 有关，但考虑到以前对自定义 hook 的类型安全性的改进，我们没有在函数体内部的 React hooks 中添加类型。这是因为**类型推断**在大多数情况下对于 React hooks 都适用。如果一个 React useState Hook 的 *初始化 state* 是一个 JavaScript 的字符串类型，那么返回的 *当前的 state* 将被推断为一个字符串类型，而返回的 *state 更新函数* 将仅以字符串作为参数，并且没有任何返回值：
 
 {title="Code Playground",lang="javascript"}
@@ -84,8 +70,6 @@ const [value, setValue] = React.useState('React');
 // value is inferred to be a string
 // setValue only takes a string as argument
 ~~~~~~~
-
-> If adding type safety becomes an aftermath for a React application and its components, there are multiple ways on how to approach it. We will start with the props and state for the leaf components of our application. For instance, the Item component receives a story (here `item`) and a callback handler function (here `onRemoveItem`). Starting out very verbose, we could add the inlined types for both function arguments as we did before:
 
 我们有多种方法来实现为 React 应用程序及其组件添加类型安全。我们可以从应用程序的一个较小的组件的 props 和 state 开始进行修改。例如，Item 组件接收一个 story（此处为 `item`）以及一个回调处理函数（此处为 `onRemoveItem`）。我们可以像之前一样，为两个函数的参数添加内联的类型：
 
@@ -120,8 +104,6 @@ const Item = ({
 );
 ~~~~~~~
 
-> There are two problems: the code is verbose, and it has duplications. Let's get rid of both problems by defining a custom `Story` type outside the component, at the top of *src/App.js*:
-
 这里的代码会有两个问题：代码冗长，并且有重复项。我们可以通过在 *src/App.js* 顶部的组件外部添加自定义的 Story 类型来解决这两个问题：
 
 {title="src/App.tsx",lang="javascript"}
@@ -154,8 +136,6 @@ const Item = ({
 );
 ~~~~~~~
 
-> The `item` is of type `Story`; the `onRemoveItem` function takes an `item` of type `Story` as an argument and returns nothing. Next, clean up the code by defining the props of Item component outside:
-
 `item` 定义为 `Story` 类型；`onRemoveItem` 函数将接受一个 `Story` 类型的参数，并且没有任何返回值。接下来，可以通过在外部定义 Item 组件的 props 的类型的方式来整理一下代码：
 
 {title="src/App.tsx",lang="javascript"}
@@ -175,8 +155,6 @@ const Item = ({ item, onRemoveItem }: ItemProps) => (
   </div>
 );
 ~~~~~~~
-
-> That's the most popular way to type React component's props with TypeScript. From here, we can navigate up the component tree into the List component and apply the same type definitions for the props:
 
 这是用 TypeScript 定义 React 组件的 props 的最常用的方法。我们可以在组件树中向上寻找到 List 组件，并为 List 组件的 props 添加类型定义：
 
@@ -211,11 +189,7 @@ const List = ({ list, onRemoveItem }: ListProps) =>
   ));
 ~~~~~~~
 
-> The `onRemoveItem` function is typed twice for the `ItemProps` and `ListProps`. To be more accurate, you *could* extract this to a standalone defined `OnRemoveItem` TypeScript type and reuse it for both `onRemoveItem` prop type definitions. Note, however, that development becomes increasingly difficult as components are split up into different files. That's why we will keep the duplication here.
-
 我们在 `ItemProps` 和 `ListProps` 中重复定义了 `onRemoveItem` 方法。为了更加简洁，你*可以*将其提取为一个独立定义的 `OnRemoveItem` 的类型，并且在需要使用 `onRemoveItem` 属性的地方复用它。需要注意的是，随着组件被拆分成不同的文件，开发会变得越来越困难。因此，我们将在此处保留重复项。
-
-> Since we already have the `Story` and `Stories` types, we can repurpose them for other components. Add the `Story` type to the callback handler in the `App` component:
 
 当我们我们已经定义了 `Story` 和 `Stories` 类型，便可以将它们重新用于其他组件。将 Story 类型添加到 App 组件中的回调处理器中：
 
@@ -236,8 +210,6 @@ const App = () => {
   ...
 };
 ~~~~~~~
-
-> The reducer function manages the `Story` type as well, except without looking into the `state` and `action` types. As the application's developer, we know both objects and their shapes passed to this reducer function:
 
 `reducer` 方法也可以管理 `Story` 类型，除非我们不关心 `state` 和 `action` 的类型。作为应用程序的开发人员，我们需要知道传递给该 reducer 函数的参数对象及其类型：
 
@@ -267,8 +239,6 @@ const storiesReducer = (
   ...
 };
 ~~~~~~~
-
-> The `Action` type with its `string` and `any` (TypeScript **wildcard**) type definitions are still too broad; and we gain no real type safety through it, because actions are not distinguishable. We can do better by specifying each action TypeScript type as an **interface**, and using a **union type** (here `StoriesAction`) for the final type safety:
 
 带有 `string` 和 `any`（TypeScript **通配符**）类型定义的 `Action` 类型看起来不太明确；而且我们通过它无法获得任何类型的安全性，因为 actions 是不可区分的。我们可以通过将每个 action 的类型指定为**接口**来优化，并使用**联合类型**（此处为 `StoriesAction`）以确保最终类型安全：
 
@@ -316,11 +286,7 @@ const storiesReducer = (
 };
 ~~~~~~~
 
-> The stories state, the current state, and the action are types; the return new state (inferred) are type safe now. For instance, if you would dispatch an action to the reducer with an action type that's not defined, you would get an type error. Or if you would pass something else than a story to the action which removes a story, you would get a type error as well.
-
 现在的 stories state，current state和 action 都定义了类型，并且返回新的 state（通过推断出来的）现在是安全类型。例如，如果你使用未定义的 `action` 类型将 action 分派给 reducer，则会出现类型错误。或者，如果你将 store 以外的其他属性传递给删除 story 的 action，则也会出现类型错误。
-
-> There is still a type safety issue in the App component's return statement for the returned List component. It can be fixed by giving the List component a wrapping HTML `div` element or a React fragment:
 
 在 List 组件中，组件的 return 语句仍然存在类型安全问题。可以通过给 List 组件包装 HTML `div` 元素或 React 片段来解决此问题：
 
@@ -343,11 +309,7 @@ const List = ({ list, onRemoveItem }: ListProps) => (
 );
 ~~~~~~~
 
-> According to a TypeScript with React issue on GitHub: *"This is because due to limitations in the compiler, function components cannot return anything other than a JSX expression or null, otherwise it complains with a cryptic error message saying that the other type is not assignable to Element."*
-
 根据 TypeScript 和 React 相关的 github issue 的说法：“*这是由于编译器的限制，功能组件无法返回除 JSX 表达式或 null 以外的任何内容，否则它会报告一个隐含的错误消息，内容是指其他类型不可分配给 Element。*”
-
-> Let's shift our focus to the SearchForm component, which has callback handlers with events:
 
 接下来关注 SearchForm 组件，该组件具有事件的回调处理器：
 
@@ -371,8 +333,6 @@ const SearchForm = ({
   ...
 );
 ~~~~~~~
-
-> Often using `React.SyntheticEvent` instead of `React.ChangeEvent` or `React.FormEvent` is usually enough. Going up to the App component again, we apply the same type for the callback handler there:
 
 我们通常使用 `React.SyntheticEvent` 代替 `React.ChangeEvent` 或 `React.FormEvent` 。回到 App 组件，我们使用该类型来定义回调处理器：
 
@@ -403,8 +363,6 @@ const App = () => {
 };
 ~~~~~~~
 
-> All that's left is the InputWithLabel component. Before handling this component's props, let's take a look at the `ref` from React's useRef Hook. Unfortunately, the return value isn't inferred:
-
 现在只剩下 InputWithLabel 组件了。在处理该组件的 props 之前，让我们看一下 React 的 useRef Hook 中的 `ref`。这里的问题在于还不能推断出返回值：
 
 {title="src/App.tsx",lang="javascript"}
@@ -421,11 +379,7 @@ const InputWithLabel = ({ ... }) => {
   }, [isFocused]);
 ~~~~~~~
 
-> We made the returned `ref` type safe, and typed it as read-only because we only execute the `focus` method on it (read). React takes over for us there, setting the DOM element to the `current` property.
-
 我们将返回的 `ref` 设置为安全类型，并将其定义为只读属性，因为我们仅对它执行 `focus` 方法（只读）。 React将会帮助我们将 DOM 元素设置为 `current` 属性。
-
-> Lastly, we will apply type safety checks for the InputWithLabel component's props. Note the`children` prop with its React specific type and the **optional types**  signaled with a question mark:
 
 最后，我们将对 InputWithLabel 组件的 props 进行安全类型的检查。需要注意的是，`children` 属性具有其 React 的特定类型，并且还有带问号的**可选类型**：
 
@@ -456,24 +410,13 @@ const InputWithLabel = ({
 };
 ~~~~~~~
 
-> Both the `type` and `isFocused` properties are optional. Using TypeScript, you can tell the compiler these don't need to be passed to the component as props. The `children` prop has a lot of TypeScript type definitions that could be applicable to this concept, the most universal of which is `React.ReactNode` from the React library.
-
 `type` 和 `isFocused` 属性都是可选的。使用 `TypeScript` 的时候，你可以告诉编译器不需要将这些作为 prop 传递给组件。`children` 属性有多个适用于此概念的 TypeScript 类型，其中最通用的是 `React` 库中的 `React.ReactNode`。
-
-> Our entire React application is finally typed by TypeScript, making it easy to spot type errors on compile time. When adding TypeScript to your React application, start by adding type definitions to your function's arguments. These functions can be vanilla JavaScript functions, custom React hooks, or React function components. Only when using React is it important to know specific types for form elements, events, and JSX.
 
 最后，我们的整个 React 应用程序都引入了 TypeScript 类型，从而很容易在编译时发现类型错误。将 TypeScript 添加到 React 应用程序时，首先需要在函数的参数中添加类型定义。这些函数可以是 JavaScript 函数，自定义的 React hook 或 React 函数组件。当我们在使用 React 时，了解表单元素，事件和 JSX 的特定类型很重要。
 
-> ### Exercises:
-
-### 练习：
+### 练习
 
 * 检查 [上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/TypeScript-in-React)。
-  
-  * 确认 [上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/react-modern-final...hs/TypeScript-in-React?expand=1)。
-> Dig into the [React + TypeScript Cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#reacttypescript-cheatsheets), because most common use cases we faced in this section are covered there as well. There is no need to know everything from the top off your head.
+* 确认 [上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/react-modern-final...hs/TypeScript-in-React?expand=1)。
 * 深入研究 [React + TypeScript 备忘单](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#reacttypescript-cheatsheets)，因为这里也涵盖了我们在本节中面临的最常见用例。无需从头至尾了解所有内容。
-
-> While you continue with the learning experience in the following sections, remove or keep your types with TypeScript. If you do the latter, add new types whenever you get a compile error.
-
 * 在接下来进行各章节中的学习时，请使用 TypeScript 删除或保留你的类型。如果你选择后者，则每当遇到编译错误时都添加新的类型。

@@ -1,10 +1,6 @@
 ## React State
 
->React Props are used to pass information down the component tree; **React state** is used to make applications interactive. We'll be able to change the application's appearance by interacting with it.
-
 React Props 用于沿着组件树向下传递信息；**React State** 用于实现应用交互。我们可以通过与应用的交互来改变它的表现。
-
->First, there is a utility function called useState that we take from React for managing state. The useState function is called a hook. There is more than one React hook -- related to state management but also other things in React -- and you will learn about them throughout the next sections. For now, let's focus on React's useState hook:
 
 首先，我们可以从 React 中获得一个叫作 useState 的工具函数去管理 state，useState 函数被称作 hook。React 中有不止一个 hook，它们与 React 中的 state 管理和其它事务有关，你可以通过接下来的章节学习它们。现在，我们只关注 React 中的 useState hook。
 
@@ -21,11 +17,7 @@ const App = () => {
 };
 ~~~~~~~
 
->React's `useState` hook takes an *initial state* as an argument. We'll use an empty string, and the function will return an array with two values. The first value (`searchTerm`) represents the *current state*; the second value is a *function to update this state* (`setSearchTerm`). I will sometimes refer to this function as *state updater function*.
-
 React的 `useState` hook 以一个*初始 state* 作为参数，我们可以使用空字符串。同时它会返回包含两个值的数组，第一个值（`searchTerm`）表示*当前 state*；第二个值（`setSearchTerm`）是一个*更新这个 state 的函数*。我有时会把这个函数称作 *state 更新函数*。
-
->If you are not familiar with the syntax of the two values from the returned array, consider reading about [JavaScript array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring). It is used to read from an array more concisely. This is array destructuring and its benefits visualized in a nutshell:
 
 如果你不熟悉这种一个数组返回两个值的语法，可以参考阅读 [JavaScript 数组解构](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)的内容。它可以用于更简洁地读取数组。简而言之，这是数组的解构，并且其好处可以直观看到：
 
@@ -43,8 +35,6 @@ const itemTwo = list[1];
 const [firstItem, secondItem] = list;
 ~~~~~~~
 
->In the case of React, the React `useState` hook is a function which returns an array. Take again the following JavaScript example as comparison:
-
 在 React 中，`useState` hook 是返回一个数组的函数。再以下面的 JavaScript 示例作比较：
 
 {title="Code Playground",lang="javascript"}
@@ -60,8 +50,6 @@ const itemTwo = getAlphabet()[1];
 // array destructuring
 const [firstItem, secondItem] = getAlphabet();
 ~~~~~~~
-
->Array destructuring is just a shorthand version of accessing each item one by one. If you express it without the array destructuring in React, it becomes less readable:
 
 数组解构只是逐个获取数组值的一种简写方式，如果你在 React 中不以解构的方式表示数组，那么它的可读性就会降低：
 
@@ -79,8 +67,6 @@ const App = () => {
 };
 ~~~~~~~
 
->The React team chose array destructuring because of its concise syntax and ability to name destructured variables. The following code snippet is an example of array destructuring:
-
 React 团队之所以选择数组解构，是因为它语法简洁并且有命名解构后的变量的能力。下面的代码片段是一个销毁数组的例子：
 
 {title="src/App.js",lang="javascript"}
@@ -95,8 +81,6 @@ const App = () => {
   ...
 };
 ~~~~~~~
-
->After we initialize the state and have access to the current state and the state updater function, use them to display the current state and update it within the App component's event handler:
 
 在我们初始化 state，且可以获取当前 state 和 state 更新函数之后，我们就可以使用它们显示当前的 state 并通过 APP 组件内部的事件处理函数对其进行更新了。
 
@@ -134,14 +118,11 @@ const App = () => {
 };
 ~~~~~~~
 
->When the user types into the input field, the input field's change event is captured by the handler with its current internal value. The handler's logic uses the state updater function to set the new state. After the new state is set in a component, the component renders again, meaning the component function runs again. The new state becomes the current state and can be displayed in the component's JSX.
-
 当用户在输入框中输入内容时，输入框内容的改变会被处理函数以当前内部值捕获。事件处理函数的逻辑使用 state 更新函数去设置新的 state。在给组件设置了新的 state 之后，组件会被重新渲染，这意味着该组件函数会被再次执行。新的 state 变为了当前的 state，并可以在组件的 JSX 中显示。
 
-
-### 练习:
+### 练习
 
 * 检查 [上一节的源码](https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-State)。
-  * 确认 [上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Props...hs/React-State?expand=1)。
+* 确认 [上一节之后的变更](https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/React-Props...hs/React-State?expand=1)。
 * 阅读更多关于 [JavaScript数组解构](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)。
 * 阅读更多关于 React 的 useState hook ([0](https://www.robinwieruch.de/react-usestate-hook), [1](https://reactjs.org/docs/hooks-state.html)), 使用它让你的 React 组件具有交互性。
