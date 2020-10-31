@@ -128,7 +128,7 @@ const List = ({ list, onRemoveItem }) =>
 
 > Because the List component has no function body, and developers are lazy folks who don't want to refactor the component for a simple logging statement, the List component uses the `||` operator instead. This is a neat trick for adding a logging statement to a function component without a function body. Since the `console.log()` on the left hand side of the operator always evaluates to false, the right hand side of the operator gets always executed.
 
-因为 List 组件没有函数体，并且开发人员很懒，不想为简单的日志记录重构该组件，所以 List 组件使用了 `||` 运算符。这是一个很 Trick 的方式向没有函数体的功能组件添加日志记录。因为在操作符左侧的 `console.log()` 始终为 false，所以操作符右侧的总会运行。
+因为 List 组件没有函数体，并且开发人员很懒，不想为简单的日志记录重构该组件，所以 List 组件使用了 `||` 运算符。这是一个很 tricky 的方式向没有函数体的功能组件添加日志记录。因为在操作符左侧的 `console.log()` 始终为 false，所以操作符右侧的总会运行。
 
 {title="Code Playground",lang="javascript"}
 ~~~~~~~
