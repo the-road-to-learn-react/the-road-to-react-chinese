@@ -32,7 +32,7 @@
 
 > * Using a utility library like [Lodash](https://lodash.com/) for its `sortBy` function is encouraged.
 
-* 使用工具库比如 [Lodash](https://lodash.com/)，它的 `sortBy` 函数是被鼓励的。
+* 使用工具库，比如使用 [Lodash](https://lodash.com/) 的 `sortBy` 函数。
 
 ![](images/sort.png)
 
