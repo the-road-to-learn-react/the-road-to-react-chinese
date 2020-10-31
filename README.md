@@ -1,19 +1,19 @@
-# The Road to React [Book]
+# 《React 学习之道》The Road to React (简体中文版)
 
-Official repository for [The Road to React](http://roadtoreact.com/). If you want to leave a review, please do it on [Amazon](https://amzn.to/2LHjxRB) or [Goodreads](https://www.goodreads.com/book/show/37503118-the-road-to-learn-react).
+[React 学习之道官方 Repo](http://roadtoreact.com/). 如果有任何建议或意见，请在 [Amazon](https://amzn.to/2LHjxRB) 或 [Goodreads](https://www.goodreads.com/book/show/37503118-the-road-to-learn-react) 留下您的评论。
 
-## Updates, Help and Support
+## 更新，帮助和支持
 
-* Get book updates via [E-Mail](https://www.getrevue.co/profile/rwieruch) or [Twitter](https://twitter.com/rwieruch)
-* Get help, while learning with the book or teach others, in the official [Slack Channel](https://courses.robinwieruch.de/community-join)
-* Find out how you can [support the Book](https://www.robinwieruch.de/about/)
+* 通过 [电子邮件](https://www.getrevue.co/profile/rwieruch) 或 [推特](https://twitter.com/rwieruch) 获取本书最新动态。
+* 进入官方 [Slack 频道](https://courses.robinwieruch.de/community-join) 获取帮助。
+* 看看如何 [资助这本书](https://www.robinwieruch.de/about/)。
 
-## Contribute
+## 贡献
 
-You can help to improve the book by opening Issues and Pull Requests (PR).
+您可以通过提交新的 Issue 和 Pull Requests 来帮助改进这本书。
 
-You can open up any PR that corrects spelling or explains a certain lesson with more detail. When writing such a technical book, you get fast blind on what needs more explanation and on what is already explained well.
+您可以提交 Pull Request 来纠正拼写，或是给某部分课程补充更多细节。在写这样一本技术类的书籍时，很容易对需要更多解释和已经解释清楚的东西视而不见。
 
-In addition, you can open Issues when you run into problems. In order to make the fix for the Issue as easy as possible, please provide a couple of details such as error log, screenshot, which page of the book it happened, your node version (command line: `node -v`) and a link to your own repository. Not all of these details are mandatory, but most of them help to fix the Issue and to improve the book.
+此外，您可以在遇到问题时通过 Github 创建新的 Issue。请提供更多细节以便于更容易解决这些问题，比如报错信息、截图、出错页码、当前 node 版本（命令行： node -v）以及你的代码仓库地址。这些细节不全是必需的，但大部分都会有助于修正问题和改进本书。
 
-Thanks a lot for your help!
+非常感谢您的帮助!
