@@ -22,6 +22,7 @@ import axios from 'axios';
 ~~~~~~~
 
 使用 `axios` 代替 `fetch`，它的使用看起来与原生 fetch API 几乎相同。它将 URL 作为一个参数，并返回一个 promise。你不需要将返回的结果转换成 JSON，因为 axios 把结果包装成了 JavaScript 的数据对象。你只是需要确保你的代码适配返回的数据结构：
+
 {title="src/App.js",lang="javascript"}
 ~~~~~~~
 const App = () => {
